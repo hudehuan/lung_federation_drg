@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+table{border-collapse:collapse;}
+body{
+	font-size: 12px;
+	font-family: "宋体";
+}
+.container{
+	width:750px;
+	margin: 0 auto;
+}
+input[type="text"]{
+	border: none;
+	border-bottom:1px solid #666 ;
+	width: 130px;
+	height: 20px;
+}
+.table_one{
+	width: 100%;
+}
+.td_h1{
+	text-align: center;
+	width: 20px;
+}
+.td_h1>div{
+	width: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+.table_one td{
+	height: 27px;
+	border: 1px solid #000;
+}
+.tit,.long_tit{
+	font-style: normal;
+	font-weight: 600;
+	min-height: 18px;
+	line-height: 24px;
+	padding: 2px 0;
+	margin-left: 14px;
+}
+.tit{
+	display: inline-block;
+	width: 70px;
+	font-weight: bold;
+}
+.long_tit{
+	line-height: 22px;
+}
+.xbj{
+	font-weight: normal;
+	margin-left: 2px;
+}
+.span_dwradio div{
+	display: inline-block;
+	position: relative;
+}
+.span_dwradio input[type="radio"],.span_dwradio input[type="checkbox"]{
+	position: absolute;
+	top:3px;
+}
+.span_dwradio label{
+	padding:0 5px 0 16px ;
+	line-height:18px;
+}
+.div_marginLeft{
+	margin-left: 40px;
+	margin-right: 6px;
+	margin-bottom: 4px;
+}
+.table_two td{
+	border: none;
+	height: 18px;
+}
+.table_three{
+	width: 100%;
+}
+.hztypj{
+	margin-left: 40px;
+}
+.hztypj>div{
+	width: 100px;
+}
+.tab_bq{
+	width: 100%;
+}
+.tab_bq tr:first-child td{
+	text-align: center;
+	border-top: none;
+}
+.tab_bq tr:last-child td{
+	border-bottom: none;
+}
+.tab_bq td:first-child{
+	border-left: none;
+}
+.tab_bq td:last-child{
+	border-right: none;
+}
+.center td{
+	text-align: center;
+}

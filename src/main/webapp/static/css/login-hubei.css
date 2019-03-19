@@ -1,0 +1,443 @@
+.header{
+	font-size: 30px;
+    line-height: 45px;
+    margin-left: 190px;
+    color: #ffffff;
+    margin-top:60px;
+}
+.box{
+	width:100%;
+	/*background: #3075bd;*/
+	position:absolute;
+	top:0px;
+	bottom:0;
+	left:0;
+	right:0;
+	/*height:400px;*/
+	background-image:url(../img/hubei-beijing-4.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#115fbb+0,5294df+48,226bc0+100 */
+	/*background-color: rgb(17,95,187); /* Old browsers */
+    /*background-color: -moz-linear-gradient(top,  rgba(17,95,187,1) 0%, rgba(82,148,223,1) 48%, rgba(34,107,192,1) 100%); 
+    background-color: -webkit-linear-gradient(top,  rgba(17,95,187,1) 0%,rgba(82,148,223,1) 48%,rgba(34,107,192,1) 100%); 
+    background-color: linear-gradient(to bottom,  rgba(17,95,187,1) 0%,rgba(82,148,223,1) 48%,rgba(34,107,192,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#115fbb', endColorstr='#226bc0',GradientType=0 ); */
+
+}
+.center-box{
+	margin:0 auto;
+	height: auto;
+    overflow: hidden;
+    /*width:79%;*/
+}
+@media only screen and (width:1920px ) {
+	.center-box{
+    	width:61%!important;
+	}
+	.left-pt {
+	    margin-left: 80px;
+	    margin-left: 195px;
+	}
+	.header {
+	    margin-left: 195px;
+	}
+}
+@media only screen and (min-width:1400px ) {
+	.center-box{
+    	width:80%;
+	}
+	.left-pt {
+	    margin-left: 80px;
+	    margin-left: 185px;
+	}
+	.header {
+	    margin-left: 185px;
+	}
+}
+@media only screen and (max-width:1399px ) {
+	.center-box{
+    	width:90%;
+	}
+	.left-pt {
+	    margin-left: 100px;
+	}
+	.header {
+	    margin-left: 100px;
+	}
+}
+.left-pt{
+	float:left;
+	height:auto;
+	width:240px;
+	/*margin-left: 195px;*/
+	margin-top: 20px;
+}
+.left-pt .djpt{
+	color:#fff;
+	font-size:12px;
+	line-height:12px;
+	margin-bottom:20px;
+}
+.s-pintai{
+	/*height: 190px!important;*/
+	height: 177px!important;
+}
+.s-pintai span{
+	margin-bottom: 15px!important;
+    width: 120px!important;
+    height: 100px!important;
+    margin-top: 25px!important;
+}
+.left-pt .w-250{
+	width:15em;
+	height:75px;
+	/*height:140px;*/
+	/*background:#1a6c9b;*/
+	background:rgba(26,108,155,0.8);
+	padding: 16px 0 10px 0;
+	margin: 2.5px 0 5px 0;
+	cursor: pointer;    
+}
+.left-pt .w-125 {
+	float: left;
+    width: 8em;
+    height: 80px;
+    background: #1a6c9b;
+    padding: 25px 0 10px 0;
+    cursor: pointer;
+}
+.mar-b{
+	margin-bottom:5px;
+}
+.mar-r{
+	margin-right:5px;
+}
+.left-pt .w-250 span,.left-pt .w-125 span{
+	
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+.left-pt .w-250 p,.left-pt .w-125 p{
+	color:#fff;
+	font-size:22px;
+	margin-left:10px;
+}
+.w-250 span img,.w-125 span img{
+	width:100%;
+	float:left;
+}
+.right-djs{
+	float:right;
+	/*position: absolute;*/
+	margin-right:40px;
+    height: auto;
+    min-width: 255px;
+   /* width: 570px;*/
+    width: 565px;
+    margin-left: 8%;
+    margin-top:20px;
+}
+.right-djs .djpt {
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+.right-djs ul{
+	height:auto;
+	overflow: hidden;
+}
+.right-djs ul li{
+	float:left;
+	margin: 2.5px;
+	cursor: pointer;
+	transition: transform 2s;
+}
+
+  .right-djs ul li:hover{
+  	/*transform: rotateY(360deg);*/
+}
+ .f-zhuan{
+ 	/*transition: transform 2s;*/
+ }        
+.f-zhuan:hover{
+ 	/*transform: rotateY(180deg);*/
+ }  
+
+.right-djs .w-125{
+	width:6.8125em;
+	height: 67px;
+    /*background: #1a6c9b;*/
+   background:rgba(26,108,155,0.8);
+    padding: 23px 0 10px 0;
+}
+.right-djs .w-250{
+	width:13.9375em;
+	height: 68px;
+    /*background: #1a6c9b;*/
+   background:rgba(26,108,155,0.8);
+    padding: 17px 0 15px 0;
+}
+.right-djs .w-250 span{
+	width:30px;
+	height:30px;
+	display:block;
+	margin:0 auto;
+	margin-bottom:12px;        
+}
+.right-djs .w-250 p{
+	text-align: center;
+	font-size: 16px;
+	color:#fff;
+} 
+.right-djs .w-125 span{
+	width:25px;
+	height:25px;
+	display:block;
+	margin:0 auto;
+	margin-bottom:12px;        
+}
+.right-djs .w-125 p{
+	text-align: center;
+	font-size: 15px;
+	color:#fff;
+}
+
+.fd-box{
+/*	left: 321px;*/
+/*	position: absolute;*/
+    background: rgba(255,255,255,0.9);
+    width: 100%;
+    border-radius:3px;
+    /*display: none;*/
+}
+.t-quanbu{
+	margin-bottom:25px;
+}
+.t-quanbu ul{
+	overflow: hidden;
+	height:auto;
+	margin-bottom: 15px;
+	padding-left: 10px;
+}
+.t-quanbu ul li{
+	float: left;
+	margin-right: 10px;
+}
+.t-quanbu ul li a{
+	padding:5px 8px;
+	font-size:13px;
+	display:block;
+}
+.t-quanbu ul li a.active{
+	background:#ef8f27;
+	color:#fff;
+	border-radius:3px;
+}
+.mar-top{
+	margin-top:5px;
+}
+.jb-active ul li a.active{
+	background:#40b92c;
+	color:#fff;
+	border-radius:3px;
+}
+.lb-active ul li a.active{
+	background:#35aef3;
+	color:#fff;
+	border-radius:3px;
+}
+.layui-layer-tips i.layui-layer-TipsL, .layui-layer-tips i.layui-layer-TipsR {
+    border-bottom-color: rgba(255,255,255,.8)!important;
+}
+.layui-layer-tips .layui-layer-content {
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2)!important;
+    background-color:rgba(255,255,255,.9)!important;
+}
+.jgjb{
+	font-size:14px;
+	color:#40b92c;
+	margin-bottom: 10px;
+	line-height: 14px;
+	padding-left: 10px;
+}
+/*.layui-layer-tips{
+	width: 30%!important;
+}*/
+.jgjb span{
+	float:left;
+	width:15px;
+	height:15px;
+	display:block;
+	margin-right:10px;
+}
+.jgjb span img{
+	width:100%;
+	float: left;
+}
+.lanse{
+	color:#35aef3!important;
+}
+.triangle-left {
+	position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 15px solid #fff;
+    border-bottom: 10px solid transparent;
+    top: 50%;
+    left: -15px;
+}
+.t-quanbu a:hover{
+	    color: #358fc1;
+    text-decoration: underline;
+}
+.t-quanbu a.active:hover{
+	    color: #fff;
+    text-decoration: none;
+}
+
+.left-bg{
+	width:550px;
+	transform: translate(30%,15%);
+}
+.left-bg img{
+	width:100%;
+}
+.box-logon{
+	position:relative;
+	height:400px;
+	width:762px;
+	left:50%;
+	top:50%;
+	/*margin-left:-381px;
+	margin-top:-225px;*/
+}
+.b-login h4{
+	color: #fff;
+    font-size: 26px;
+    position: absolute;
+    top: -50px;
+}
+.b-login h5{
+	margin: 10px 20px;
+    color: #4ca2e8;
+    font-size: 18px;
+    font-weight: normal;
+}
+    
+.b-login{
+	height: 340px;
+    width: 345px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 10%;
+    margin-top: -200px;
+	/*padding:10px;*/
+	/*box-shadow: 0 0 3px #2a67a7;*/
+}
+.t-tupian{
+	float:left;
+	width:245px;
+	height:240px;
+	background: url(../img/tupian_03.png);
+	margin: 18px 0px 45px 50px;
+}
+.login-y{
+	/* padding: 23px 75px; */
+    background: #fff;
+    width: 252px;
+    float: right;
+    margin: 0px 45px 0px 24px;
+}
+.dl-dlu{
+	color: #187dd9;
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    margin-left: 50px;
+}
+.b-login ul{
+	text-align: center;
+	
+}
+.b-login ul li{
+	position:relative;
+	margin-bottom: 20px;
+}
+.b-login-top{
+	height:60px;
+	width:100%;
+	background:#ccc;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0073d8+0,00a0ea+52,0366bc+100 */
+	background: rgb(0,115,216); /* Old browsers */
+
+
+}
+.yonghuming, .mima {
+    width: 84%;
+    height: 40px;
+    border: 1px solid #e2e2e2;
+   /* border-radius: 5px;*/
+    /* background: #c5c5c5; */
+    padding-left: 30px;
+    padding-right: 5px;
+}
+.jizhumima {
+    position: relative;
+    /* left: 5px; */
+    float: left;
+    padding-left: 20px;
+    }
+.wangjimima {
+    float: right;
+}
+.forget {
+    color: #999;
+    font-size: 14px;
+    margin-top: 10px;
+    height: 20px;
+    line-height: 20px;
+    /*padding: 0 13px;*/
+}
+.denglu {
+    /*width: 100%;*/
+    height: 40px;
+    /* border: 1px solid #ececec; */
+    background: #ef7e0f;
+   /* border-radius: 5px;*/
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    margin: 30px 4px 30px 4px;
+    text-align: center;
+}
+.denglu:hover {
+    
+    background: #d56a02;
+    
+}
+.l-daoying{
+	height: 200px;
+    width: 762px;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    margin-left: -381px;
+    background: url(../img/daoying.png);
+    margin-top: -8px;
+}
+.l-daoying p{
+	margin-top: 80px;
+    text-align: center;
+    color: #fff;
+    /* opacity: 0.2; */
+}

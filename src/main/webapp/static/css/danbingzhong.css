@@ -1,0 +1,160 @@
+.container{
+	width:800px;
+}
+.form-group>label{
+	width:75px;
+}
+div.input-group{
+	padding:0 1px;
+	border-bottom:1px solid #ccc;
+}
+.panel-body>div{
+	padding:4px 0;
+	border-bottom:1px dotted #ccc;
+}
+.borderBottom{
+	padding:4px 0;
+	border-bottom:1px dotted #ccc;
+}
+p{
+	margin:2px 2px 2px 0;
+	padding:2px 2px 2px 0;
+	border-bottom:1px dotted #ccc;
+}
+p>span{
+	display:inline-block;
+	width:90px;
+}
+input[type="radio"],input[type="checkbox"]{
+	outline: none!important;
+}
+input[type="radio"]{
+	margin-right:2px;
+}
+label{
+	font-weight: normal;
+	margin: 0;
+}
+body{
+	font-family: "宋体";
+}
+.content{
+    width: 800px;
+    margin: 0 auto;
+}
+input[type=text]{
+    width: 144px;
+    display: inline-block;
+}
+.tit,.long_tit,h6{
+	font-style: normal;
+	font-weight: 600;
+	min-height: 18px;
+	line-height: 18px;
+	padding: 2px 0;
+}
+div .tit:first-child{
+	margin-left: 16px;
+}
+div .long_tit:first-child{
+	margin-left: 16px;
+}
+table td select{
+	margin-left: 8px;
+}
+select{
+	width: 88px;height: 25px;
+	border: 1px solid #dcdcdc;
+	border-radius: 2px;
+	outline: none;
+	margin:2px 0;
+}
+.tit{
+	width: 70px;
+	display:inline-block;
+}
+.long_tit{
+	line-height: 22px;
+}
+.span_dwradio div{
+	display: inline-block;
+	position: relative;
+}
+.span_dwradio input{
+	position: absolute;
+	top:-2px;
+}
+.span_dwradio label{
+	padding:0 5px 0 16px ;
+}
+h4{
+	font-size:14px;
+	font-weight:normal ;
+	padding-left:0px;
+	position:relative;
+	margin: 6px 6px 6px 4px;
+}
+h4 span{
+	display: inline-block;
+	height: 18px;
+	width: 8px;
+	background: #0066cc;
+	position: absolute;
+	left: -16px;top:-2px;
+}
+.xbj{
+	font-weight: normal;
+	margin-left: 2px;
+}
+/*.div_marginTop{
+	margin-top:3px;
+}*/
+.i_yz{
+	font-size: 12px!important;
+	font-weight: 600;
+	font-style: normal;
+	margin-left: 4px;
+}
+.panel-heading{
+	font-size: 14px;
+}
+h6{
+	border-bottom: 1px solid #ffa800;
+	padding: 0 2px;
+	display:inline-block;
+	margin: 11px 2px 2px 2px;
+	position: relative;
+	top: 3px;
+}
+.hztypj,.div_marginLeft{
+	margin-left: 92px;
+}
+.hztypj>div{
+	width: 100px;
+}
+.sanjietit {
+	padding: 0 6px!important;
+	border: 1px solid #ccc!important;	
+	border-radius: 2px;
+	margin-bottom: 16px;
+}
+/*.sanjietit div .tit,.sanjietit div .long_tit{
+	margin-left: 9px!important;
+}*/
+.sanjietit div span:first-child{
+	margin-left: 9px!important;
+}
+.divlastchild{
+	padding: 4px 0;
+}
+.red{
+	color: #f00;
+	margin-left: 10px;
+}
+/*.white{
+	color:transparent;
+}*/
+/*stickUp插件*/
+.bi-stickUp{
+	display:block;background-color:#dff0d8 ;opacity:0.9;padding:5px;overflow: hidden;width:100%;z-index: 999;border:1px solid #dff0d8;
+}

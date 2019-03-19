@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" name="hibernateCache">
+	<!-- http://ehcache.org/ehcache.xml -->
+    <!--
+        缓存到硬盘的路径
+    -->
+	<diskStore path="C:/CacheTmpDir" />
+
+	<!-- DefaultCache setting. -->
+    <!--
+        默认设置
+        name:Cache的唯一标识名称
+        maxEntriesLocalHeap:堆内存中最大缓存对象数，0没有限制
+        eternal:elements是否永久有效，如果为true，timeouts将被忽略，element将永不过期
+        maxElementsInMemory : 在內存中最大緩存的对象数量。
+        eternal : 缓存的对象是否永远不变。
+        timeToIdleSeconds ：当eternal为false时，这个属性才有效，0为不限制 缓存创建以后，最后一次访问缓存的日期至失效之时的时间间隔
+        timeToLiveSeconds ：缓存自创建日期起至失效时的间隔时间
+        overflowToDisk ：内存满了，是否要缓存到硬盘。
+        maxEntriesLocalDisk: 磁盘中的最大对象数，默认为0不限制
+        diskPersistent 是否缓存虚拟机重启期数据 tomcat重启写入硬盘,重启后依然使用缓存数据
+        diskExpiryThreadIntervalSeconds  磁盘失效线程运行时间间隔，默认是120
+        clearOnFlush:当调用flush()是否清除缓存，默认是
+        diskSpoolBufferSizeMB:这个参数设置DiskStore（磁盘缓存）的缓存区大小。默认是30MB。每个Cache都应该有自己的一个缓冲区
+        memoryStoreEvictionPolicy 内存回收策略，默认回收策略 当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。
+            默认策略是LRU（最近最少使用）。你可以设置为FIFO（先进先出）或是LFU（较少使用）。
+    -->
+	<!--<defaultCache maxEntriesLocalHeap="100" eternal="true" diskPersistent="true"-->
+		<!--overflowToDisk="true" maxEntriesLocalDisk="100000" />-->
+    <!--<cache name="tt" maxEntriesLocalHeap="1000" eternal="true"-->
+        <!--overflowToDisk="true" maxEntriesLocalDisk="10000" />-->
+
+    <defaultCache maxEntriesLocalHeap="1000" eternal="true" overflowToDisk="true"
+                  diskPersistent="true" maxEntriesLocalDisk="0" memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="MsgCache" maxEntriesLocalHeap="1000" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+           overflowToDisk="true" diskPersistent="true" maxEntriesLocalDisk="0" memoryStoreEvictionPolicy="LRU" />
+
+
+
+	<!--<cache name="org.springside.examples.showcase.entity.Team" maxEntriesLocalHeap="100" eternal="true"-->
+		<!--overflowToDisk="true" maxEntriesLocalDisk="1000" />-->
+	<!--<cache name="org.springside.examples.showcase.entity.Role" maxEntriesLocalHeap="100"-->
+		<!--eternal="true" overflowToDisk="true" maxEntriesLocalDisk="1000" />-->
+</ehcache>

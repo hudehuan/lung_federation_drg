@@ -1,0 +1,51 @@
+body {
+	font-family: "微软雅黑";
+}
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+.shadow {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.hide{
+	display:none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clear{
+	clear:both;
+}
+html, body, form, input, select, textarea, div, p, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, img, dl, dt, dd, table, th, td, blockquote, fieldset, div, strong, label, em {
+	margin: 0;
+	padding: 0;
+}
+ul, li, dl, dt, dd {
+	list-style: none;
+}
+a{
+	cursor:pointer;
+	text-decoration:none;
+}
+a:hover, a:active, a:focus {
+	outline: 0;text-decoration: none;
+}
+/*input{
+	border:none!important;
+	outline:none!important;
+}
+input:focus{
+	border:none!important;
+	outline:none!important;
+}*/

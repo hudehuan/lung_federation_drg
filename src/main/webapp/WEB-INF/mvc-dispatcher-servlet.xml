@@ -1,0 +1,85 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--use-default-filters="false"-->
+    <context:component-scan base-package="com.dldata.drgs" >
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8" />
+            </bean>
+            <!-- 将Jackson2HttpMessageConverter的默认格式化输出设为true -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="prettyPrint" value="true"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <!-- 容器默认的DefaultServletHandler处理 所有静态内容与无RequestMapping处理的URL-->
+    <mvc:default-servlet-handler/>
+
+
+    <!--配置springMvc上传文件-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="maxUploadSize" value="10485760000" />
+        <property name="maxInMemorySize" value="40960" />
+    </bean>
+
+    <!--<bean id="myFilter" class="com.dldata.drgs.filter.SSOClientFilter">-->
+    <!--<property name="sysConfig">-->
+    <!--<ref bean="sysConfig"/>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <!--目录配置文件加载-->
+    <context:property-placeholder location="classpath:sysconfig.properties,classpath:directory.properties,
+    classpath:dictionary.properties" file-encoding="UTF-8"/>
+    <bean id="directoryConfig" class="com.dldata.drgs.utils.pubs.DirectoryConfig">
+        <!--<property name="login_ip" value="${login.ip}"/>-->
+        <property name="login_url" value="${login.url}"/>
+        <property name="login_dir" value="${login.dir}"/>
+        <property name="temp_dir" value="${template_path.dir}"/>
+        <property name="home_page_url" value="${homePage.url}"/>
+        <property name="sys_udun_vali" value="${sys.udun.vali}"/>
+    </bean>
+    <bean id="dictionaryConfig" class="com.dldata.drgs.utils.pubs.DictionaryConfig">
+        <!--<property name="jxxjgsZyzdicd10Bmmc" value="${jxxjgsZyzdicd10Bmmc}"/>-->
+        <!--<property name="xlsjZyzdicd10Bmmc" value="${xlsjZyzdicd10Bmmc}"/>-->
+        <!--<property name="xlsjYfjbicd10Bmmc" value="${xlsjYfjbicd10Bmmc}"/>-->
+        <!--<property name="sqhdxfyCRZyzdicd10Bmmc" value="${sqhdxfyCRZyzdicd10Bmmc}"/>-->
+        <!--<property name="kgjzhsZyzdicd10Bmmc" value="${kgjzhsZyzdicd10Bmmc}"/>-->
+        <!--<property name="xgjzhsZyzdicd10Bmmc" value="${xgjzhsZyzdicd10Bmmc}"/>-->
+        <!--<property name="mxzsxfIcd10Bm" value="${mxzsxfIcd10Bm}"/>-->
+        <!--<property name="sqhdxfyETIcd10Bm" value="${sqhdxfyETIcd10Bm}"/>-->
+        <!--<property name="ngsIcd10Dm" value="${ngsIcd10Dm}"/>-->
+        <!--<property name="pgcIcd10Bm" value="${pgcIcd10Bm}"/>-->
+        <!--<property name="gzdmplyzZyzdicd10Bmmc" value="${gzdmplyzZyzdicd10Bmmc}"/>-->
+        <property name="zhiChengCode" value="${zhiChengCode}"/>
+        <property name="zhiWeiCode" value="${zhiWeiCode}"/>
+        <property name="staffType" value="${staffType}"/>
+        <property name="dicType" value="${dicType}"/>
+        <property name="keshiType" value="${keshiType}"/>
+        <property name="systemCode" value="${systemCode}"/>
+        <property name="dataDownUpCode" value="${dataDownUpCode}"/>
+    </bean>
+
+
+</beans>

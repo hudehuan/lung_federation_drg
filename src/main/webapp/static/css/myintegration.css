@@ -1,0 +1,12 @@
+
+.main .main-content .item .item-name{
+	font-size:16px; 
+
+	font-family: "微软雅黑";
+}
+
+.main{margin-top:6%;height: 75%;}
+.header{text-align: left;width:80%;margin:0 auto;}
+.header img{width:30%;height:auto;margin-top:20px;}
+.main .main-header{height:44px;line-height:52px;}
+.container-all{padding-bottom: 50px;;}

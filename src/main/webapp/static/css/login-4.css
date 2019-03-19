@@ -1,0 +1,184 @@
+.header{
+	font-size: 34px;
+    line-height: 45px;
+    /* margin-left: 190px; */
+    color: #ffffff;
+    margin-top: 15%;
+    letter-spacing: 3px;
+}
+.center{
+	width: 800px;
+    margin: 0 auto;
+    }
+.box{
+	width:100%;
+	/*background: #3075bd;*/
+	position:absolute;
+	top:0px;
+	bottom:0;
+	left:0;
+	right:0;
+	/*height:400px;*/
+	background-image:url(../img/login-bg.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#115fbb+0,5294df+48,226bc0+100 */
+	/*background-color: rgb(17,95,187); /* Old browsers */
+    /*background-color: -moz-linear-gradient(top,  rgba(17,95,187,1) 0%, rgba(82,148,223,1) 48%, rgba(34,107,192,1) 100%); 
+    background-color: -webkit-linear-gradient(top,  rgba(17,95,187,1) 0%,rgba(82,148,223,1) 48%,rgba(34,107,192,1) 100%); 
+    background-color: linear-gradient(to bottom,  rgba(17,95,187,1) 0%,rgba(82,148,223,1) 48%,rgba(34,107,192,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#115fbb', endColorstr='#226bc0',GradientType=0 ); */
+
+}
+
+
+
+.b-login{
+	height: 350px;
+    width: 430px;
+    background: rgba(255,255,255,0.2);
+    margin:0 auto;
+    margin-top:5% ;
+	border: 1px solid rgba(255,255,255,0.3);
+}
+
+.login-y{
+	padding: 30px 0;
+    width: 300px;
+    margin: 0px auto;
+}
+.dl-dlu{
+	color: #fff;
+    font-size: 24px;
+    height: 110px;
+    line-height: 110px;
+    margin-left: 40px;
+}
+.b-login ul{
+	text-align: center;
+	
+}
+.b-login ul li{
+	position:relative;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.yonghuming, .mima {
+    width: 84%;
+    height: 40px;
+    border: none;
+    background:none;
+    color: #fff;
+    outline: none;
+    padding-left: 30px;
+    padding-right: 5px;
+}
+.yonghuming::-webkit-input-placeholder,.mima::-webkit-input-placeholder{
+	color:#fff;
+}
+.jizhumima {
+    position: relative;
+    /* left: 5px; */
+    float: left;
+    padding-left: 20px;
+    }
+.wangjimima {
+    float: right;
+}
+.forget {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    height: 20px;
+    line-height: 20px;
+    /*padding: 0 13px;*/
+}
+.denglu {
+    height: 40px;
+    background: #ff9022;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    margin: 30px 4px 30px 4px;
+    text-align: center;
+    border-radius: 20px;
+}
+.denglu:hover {
+    
+    background: #d56a02;
+    
+}
+
+.wenzi{
+	color: #fff;
+    width: 510px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -30%;
+	margin-top: -15%;
+    height: 350px;
+    padding-top: 50px;
+}
+.wenzi .wenzi-one{
+	font-size: 54px;
+    line-height: 54px;
+}
+.wenzi .wenzi-tow{
+	font-size: 68px;
+    font-weight: 700;
+    line-height: 68px;
+    margin: 55px 0 35px 0;
+}
+.wenzi .wenzi-tow span{
+	color: #ef7e0f;
+}
+.wenzi .wenzi-t{
+	font-size: 35px;
+    line-height: 35px;
+}
+.wenzi .wenzi-t span{
+	width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 13px;
+    float: left;
+    margin-right: 10px;
+}
+.footer{
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0px;
+}
+.foot-logo{
+    width:85px;
+    height:30px;
+    /*float:left;*/
+    display:inline-block;
+}
+.foot-logo span:nth-of-type(1){
+    display: block;
+    line-height: 22px;
+    font-size: 22px;
+    float:left;
+}
+.foot-logo span:nth-of-type(1) i{
+    font-style: normal;
+}
+.foot-logo span:nth-of-type(2){
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    float:left;
+}
+.foot-name{
+    font-size:18px;
+    display:inline-block;
+    color:#fff;
+    line-height:26px;
+}

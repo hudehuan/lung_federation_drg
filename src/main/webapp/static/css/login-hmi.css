@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/* =container */
+html, body {
+  height: 100%; }
+
+body {
+  min-width: 980px;
+  overflow: hidden; 
+  }
+
+.container-all {
+  padding: 0;
+  height: 100%; }
+
+.header {
+  height: 88px;
+  line-height: 88px;
+  padding-left: 100px;
+  background-color: #fff; }
+  .header .logo {
+    display: inline-block;
+    width: 194px;
+    height: 40px;
+    background: url(../img/login-right_03.png) no-repeat 0 0; }
+  .header h1 {
+    display: inline-block;
+    font-size: 26px;
+    margin: 0 0 0 10px;
+    padding: 5px 0 5px 10px;
+    border-left: 1px solid #d9dadc;
+    color: #666; }
+
+.main {
+  position: relative;
+  height: 560px;
+
+  min-height: 341px;
+  background: url(../img/login-right-bg_07.png) no-repeat 0 0;
+  background-size: cover;
+  /* 1500*/ }
+  .main .slogan {
+    position: absolute;
+    top: 36.4%;
+    left: 15.7%;
+    color: #fff; }
+    .main .slogan .main-slogan {
+      margin: 0;
+      font-size: 42px;
+      font-style: italic; }
+    .main .slogan .sub-slogan {
+      margin: 0;
+      margin-top: 20px;
+      font-size: 22px; }
+  .main .login {
+    position: absolute;
+    top: 60px;
+    right: 15%;
+    width: 530px;
+    moz-box-shadow:1px 1px 5px #666666;
+     -webkit-box-shadow:1px 1px 5px #666666; 
+     box-shadow:1px 1px 5px #666666;
+  background-color: #fff;
+ }
+    .main .login .login-header .title {
+      margin: 0 33px;
+      border-bottom: 1px solid #e5e8eb; }
+    .main .login .login-header h2 {
+      display: inline-block;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #419ade;
+      border-bottom: 2px solid #419ade; }
+    .main .login .login-main {
+      width: 80%;
+      margin: 0 auto; }
+      .main .login .login-main input::-webkit-input-placeholder {
+        color: #e3e7ea !important; }
+      .main .login .login-main input:-webkit-input-placeholder {
+        color: #e3e7ea !important; }
+      .main .login .login-main input:-moz-placeholder {
+        color: #e3e7ea !important; }
+      .main .login .login-main input::-moz-placeholder {
+        color: #e3e7ea !important; }
+      .main .login .login-main input:-ms-input-placeholder {
+        color: #e3e7ea !important; }
+      .main .login .login-main .form-group-1 {
+        margin-top: 37px;
+        color: #fff; }
+        .main .login .login-main .form-group-1 label {
+          color: #808fa2; }
+        .main .login .login-main .form-group-1 .user-wrap {
+          position: relative; }
+          .main .login .login-main .form-group-1 .user-wrap .icon-user {
+            position: absolute;
+            top: 17px;
+            left: 15px;
+            font-size: 20px;
+            color: #bcd0e7; }
+          .main .login .login-main .form-group-1 .user-wrap .line {
+            position: absolute;
+            left: 50px;
+            width: 0;
+            height: 47px;
+            border-left: 1px solid #e3e7ea; }
+          .main .login .login-main .form-group-1 .user-wrap .user {
+            width: 412px;
+            height: 47px;
+            padding-left: 60px;
+            border: 1px solid #e3e7ea;
+            color: #666;
+            background-color: rgba(254, 254, 254, 0.1);
+            outline: none; }
+      .main .login .login-main .form-group-2 {
+        margin: 20px 0;
+        color: #fff; }
+        .main .login .login-main .form-group-2 label {
+          color: #808fa2; }
+        .main .login .login-main .form-group-2 .pwd-wrap {
+          position: relative; }
+          .main .login .login-main .form-group-2 .pwd-wrap .icon-pwd {
+            position: absolute;
+            top: 17px;
+            left: 23px;
+            color: #bcd0e7; }
+          .main .login .login-main .form-group-2 .pwd-wrap .line {
+            position: absolute;
+            left: 50px;
+            width: 0;
+            height: 47px;
+            border-left: 1px solid #e3e7ea; }
+          .main .login .login-main .form-group-2 .pwd-wrap .pwd {
+            width: 412px;
+            height: 47px;
+            padding-left: 60px;
+            border: 1px solid #e3e7ea;
+            color: #666;
+            background-color: rgba(254, 254, 254, 0.1);
+            outline: none; }
+      .main .login .login-main .form-group-3 {
+        overflow: hidden;
+        color:  #C0A16B; 
+        font-size: 16px;}
+        .main .login .login-main .form-group-3 .checkbox {
+          position: relative;
+          display: inline-block;
+          top: 2px;
+          width: 16px;
+          height: 16px;
+          border: 1px solid #b5cbe5;
+          border-radius: 4px;
+          margin-right: 10px;
+          outline: none;
+          -webkit-appearance: none; }
+          .main .login .login-main .form-group-3 .checkbox:hover {
+            cursor: pointer; }
+          .main .login .login-main .form-group-3 .checkbox:checked:after {
+            content: '√';
+            color: #000;
+            position: absolute;
+            font-size: 15px;
+            left: 2px;
+            top: -1px; }
+        .main .login .login-main .form-group-3 .forget {
+          display: block;
+          float: right;
+          color: #b5cbe5;
+          text-decoration: underline; }
+      .main .login .login-main .form-group-4 {
+        margin: 0; }
+        .main .login .login-main .form-group-4 .btn {
+          margin: 36px 0 60px 0;
+          background: #3f9ae2;
+          height: 48px;
+          padding: 0;
+          font-size: 18px;
+          line-height: 48px;
+          text-align: center;
+          border-color: #3f9ae2; }
+          .main .login .login-main .form-group-4 .btn:hover {
+            color: #ddd;
+            background-color: #1580D4; }
+  /*@media screen and (min-width: 880px) {
+    .main .login {
+      top: 12%; }
+      .main .login .login-main {
+        width: 80%; }
+        .main .login .login-main .form-group-1 {
+          margin-top: 15px; }
+          .main .login .login-main .form-group-1 .user-wrap .user {
+            width: 100%; }
+        .main .login .login-main .form-group-2 {
+          margin-top: 15px; }
+          .main .login .login-main .form-group-2 .pwd-wrap .pwd {
+            width: 100%; }
+        .main .login .login-main .form-group-4 .btn {
+          margin: 20px 0 40px 0;
+          height: 40px;
+          line-height: 40px; } }
+  @media screen and (min-width: 1500px) {
+    .main .login {
+      position: absolute;
+      top: 16.1%;
+      right: 14.95%;
+      width: 34.95%;
+      max-width: 671px;
+      background-color: #fff; }
+      .main .login .login-header .title {
+        margin: 0 33px;
+        border-bottom: 1px solid #e5e8eb; }
+      .main .login .login-header h2 {
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #419ade;
+        border-bottom: 2px solid #419ade; }
+      .main .login .login-main {
+        width: 61.4%;
+        margin: 0 auto; }
+        .main .login .login-main input::-webkit-input-placeholder {
+          color: #e3e7ea !important; }
+        .main .login .login-main input:-webkit-input-placeholder {
+          color: #e3e7ea !important; }
+        .main .login .login-main input:-moz-placeholder {
+          color: #e3e7ea !important; }
+        .main .login .login-main input::-moz-placeholder {
+          color: #e3e7ea !important; }
+        .main .login .login-main input:-ms-input-placeholder {
+          color: #e3e7ea !important; }
+        .main .login .login-main .form-group-1 {
+          margin-top: 37px;
+          color: #fff; }
+          .main .login .login-main .form-group-1 label {
+            color: #e3e7ea; }
+          .main .login .login-main .form-group-1 .user-wrap {
+            position: relative; }
+            .main .login .login-main .form-group-1 .user-wrap .icon-user {
+              position: absolute;
+              top: 17px;
+              left: 15px;
+              font-size: 20px;
+              color: #bcd0e7; }
+            .main .login .login-main .form-group-1 .user-wrap .line {
+              position: absolute;
+              left: 50px;
+              width: 0;
+              height: 47px;
+              border-left: 1px solid #e3e7ea; }
+            .main .login .login-main .form-group-1 .user-wrap .user {
+              width: 412px;
+              height: 47px;
+              padding-left: 60px;
+              border: 1px solid #e3e7ea;
+              color: #666;
+              background-color: rgba(254, 254, 254, 0.1);
+              outline: none; }
+        .main .login .login-main .form-group-2 {
+          margin: 20px 0;
+          color: #fff; }
+          .main .login .login-main .form-group-2 label {
+            color: #e3e7ea; }
+          .main .login .login-main .form-group-2 .pwd-wrap {
+            position: relative; }
+            .main .login .login-main .form-group-2 .pwd-wrap .icon-pwd {
+              position: absolute;
+              top: 17px;
+              left: 23px;
+              color: #bcd0e7; }
+            .main .login .login-main .form-group-2 .pwd-wrap .line {
+              position: absolute;
+              left: 50px;
+              width: 0;
+              height: 47px;
+              border-left: 1px solid #e3e7ea; }
+            .main .login .login-main .form-group-2 .pwd-wrap .pwd {
+              width: 412px;
+              height: 47px;
+              padding-left: 60px;
+              border: 1px solid #e3e7ea;
+              color: #666;
+              background-color: rgba(254, 254, 254, 0.1);
+              outline: none; }
+        .main .login .login-main .form-group-3 {
+          overflow: hidden;
+          color: #b5cbe5; }
+          .main .login .login-main .form-group-3 .checkbox {
+            position: relative;
+            display: inline-block;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #b5cbe5;
+            border-radius: 4px;
+            margin-right: 10px;
+            outline: none;
+            -webkit-appearance: none; }
+            .main .login .login-main .form-group-3 .checkbox:checked:after {
+              content: '√';
+              position: absolute;
+              font-size: 16px;
+              left: 2px;
+              top: -1px; }
+          .main .login .login-main .form-group-3 .forget {
+            display: block;
+            float: right;
+            color: #b5cbe5;
+            text-decoration: underline; }
+        .main .login .login-main .form-group-4 {
+          margin: 0; }
+          .main .login .login-main .form-group-4 .btn {
+            margin: 36px 0 60px 0;
+            background: #3f9ae2;
+            height: 58px;
+            padding: 0;
+            font-size: 18px;
+            line-height: 58px;
+            text-align: center;
+            border-color: #3f9ae2; }
+            .main .login .login-main .form-group-4 .btn:hover {
+              color: #ddd;
+              background-color: #1580D4; } }*/
+
+.footer {
+  height: 100px;
+  line-height: 80px;
+  background-color: #fff; 
+  color:  #666;}
+  .footer .footer-inner {
+    text-align: center; }
+  .footer img {
+    width: 100px;
+    height: 40px; }
+  .footer .inc {
+    display: inline-block;
+    margin-left: 16px;
+    font-size: 18px; }

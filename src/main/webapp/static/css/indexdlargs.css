@@ -1,0 +1,268 @@
+html,body{
+	height:100%;
+	width:100%;
+}
+.ce-nan{
+	background: #0470a9;
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	width: 200px;
+	z-index: 99;
+	overflow-y: scroll;
+}
+.main-content{
+	position: absolute;
+	background:#f5f5f5;
+	padding-left:200px;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+}
+.login{
+	padding: 20px 0;
+	text-align: center;
+	background: #0470a9;
+	box-shadow: 0 0 1px #c2dff9;
+}
+.login p{
+	margin-bottom:0;
+	color:#fff;
+}
+.login p:first-child{
+	font-size: 28px;
+	line-height: 28px;
+}
+.login p:last-child{
+	font-size: 18px;
+	line-height: 28px;
+}
+.candan-list{
+	/*padding:0 20px;*/
+}
+.candan-list a{
+	color:#fff;
+	font-size:14px;
+	line-height:18px;
+	display: block;
+	padding: 10px 20px!important;
+	cursor: pointer;
+}
+.candan-list a:hover{
+	text-decoration: none;
+	background:rgba(255,255,255,0.2)!important;
+}
+.candan-list a.active{
+	background: rgba(255,255,255,0.2)!important;
+}
+.candan-list .li-f span img,.candan-list .li-c span img{
+	width:100%;
+	float:left;
+}
+.candan-list .li-f .s-img{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	float: left;
+	/*background: #ccc;*/
+	margin-top: 1px;
+	margin-right:10px;
+}
+.ul-t a{
+	padding-left:30px!important;
+}
+.ul-c a{
+	padding-left:40px;
+}
+.candan-list .li-t .f-span {
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	float: left;
+	background: #ccc;
+	margin-top: 5px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+.font-icon{
+	font-size:12px;
+	float:left;
+	margin-top:3px;
+}
+.z-span{
+	/*display:inline-block;*/
+	width:95px;
+}
+.mc-top{
+	height: 45px;
+	background: #fff;
+	border-bottom: 2px solid #ddd;
+	overflow: hidden;
+}
+.t-touwen{
+	float: left;
+	font-size: 22px;
+	font-weight: 600;
+	margin-left: 20px;
+	line-height: 45px;
+	color: #436592;
+}
+.t-touwen-right ul{
+	float: right;
+	margin-right: 10px;
+	overflow: hidden;
+	height: auto;
+}
+.t-touwen-right ul li{
+	float: left;
+	margin-right: 20px;
+	font-size: 16px;
+	line-height:45px;
+}
+.t-touwen-right ul li a{
+	color:#3493f4;
+}
+.t-touwen-right ul li a:hover{
+	color:#2b7dd0;
+	text-decoration: none;
+}
+.mc-tab{
+	height: 38px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+.mc-tab ul{
+	overflow: hidden;
+	height:auto;
+	margin-bottom:0;
+	float: left;
+}
+.mc-tab ul li{
+	float:left;
+}
+.mc-tab ul li a{
+	display: block;
+	padding: 8px 15px;
+	color: #333;
+	border-right: 1px solid #ddd;
+}
+.mc-tab ul li a:hover{
+	text-decoration: none;
+	color:#fff;
+	background:#f58839;
+}
+.mc-tab ul li a.active{
+	text-decoration: none;
+	color:#fff;
+	background:#f58839;
+}
+.bg-f{
+	background:#fff;
+}
+.h-t-biao{
+	height:300px;
+	border-radius: 3px;
+	box-shadow: 0 0 4px #e4e4e4;
+}
+.man-c-1{
+	height:auto;
+	overflow: hidden;
+	padding:15px 0  0 0;
+}
+.li-t-a.on .glyphicon-triangle-right:before{
+	content: "\e252";
+}
+.li-t-a.on .glyphicon-folder-close:before{
+	content:"\e118";
+}
+.li-f-a.on .glyphicon-triangle-right:before{
+	content: "\e252";
+}
+.li-f-a.on .glyphicon-folder-close:before{
+	content:"\e118";
+}
+.mc-tab .f-l{
+	float: left;
+	padding: 10px;
+	border-right: 1px solid #ddd;
+	cursor: pointer;
+}
+.mc-tab .f-l:hover{
+	background:#3493f4;
+	color:#fff;
+}
+.mc-tab .f-r:hover{
+	background:#3493f4;
+	color:#fff;
+}
+.mc-tab .f-r{
+	float: right;
+	padding: 10px;
+	border-left: 1px solid #ddd;
+	cursor: pointer;
+}
+.cz-r{
+	float:right;
+	padding: 8px 15px;
+	border-left: 1px solid #ddd;
+	cursor: pointer;
+}
+.gl-bottom{
+	font-size: 12px;
+	margin-left: 5px;
+	color: #999;
+}
+.man-c-2,.man-c-3,.man-c-4{
+	height:auto;
+	overflow: hidden;
+	margin-top:15px;
+}
+.main-center{
+	/*	height: 685px;*/
+	overflow: auto;
+	padding-right: 15px;
+
+	background: #f5f5f5;
+	background:linear-gradient(0deg,#f5f5f5,#efefef);
+}
+.col-lg-4,.col-lg-6{
+	padding-right: 0px!important;
+	padding-left: 20px!important;
+}
+.m-biao{
+	height:100px;
+	border-radius: 3px;
+	box-shadow: 0 0 4px #e4e4e4;
+}
+.candan-list li .ul-t{
+	display:none;
+}
+.candan-list li .ul-c{
+	display:none;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+	background-color: #0470a9;
+}
+
+
+
+.icon-tu{
+	width: 16px;
+	height: 13px;
+	display: inline-block;
+	margin-right: 5px;
+}
+.ul-c a {
+	padding-left: 34px!important;
+}
+.font-icon {
+	margin-right: 8px;
+}
+.ul-t .li-t .li-t-a{
+	padding-left:25px!important;
+}
+.ul-t .ul-c .li-c a{
+	padding-left:30px!important;
+}
