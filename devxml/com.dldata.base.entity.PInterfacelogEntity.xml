@@ -1,0 +1,460 @@
+<DATALIST>
+  <STOREOBJ>
+    <id>c51e5db4-0319-4785-ba75-2e0dc4fef476</id>
+    <data class="PInterfacelogEntity">
+      <id>c51e5db4-0319-4785-ba75-2e0dc4fef476</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/7c6d7ff9a9e59ee0470aa4926294a0c2.json</jsondata>
+      <cdate>2017-12-11 07:24:58.82</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>29a221c1-9bc3-4605-a79e-38dbcecedc63</id>
+    <data class="PInterfacelogEntity">
+      <id>29a221c1-9bc3-4605-a79e-38dbcecedc63</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/7c6d7ff9a9e59ee0470aa4926294a0c2.json</jsondata>
+      <cdate>2017-12-11 07:25:14.509</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>4dd356ce-930c-403c-842a-0728e4e71127</id>
+    <data class="PInterfacelogEntity">
+      <id>4dd356ce-930c-403c-842a-0728e4e71127</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/7c6d7ff9a9e59ee0470aa4926294a0c2.json</jsondata>
+      <cdate>2017-12-11 07:25:29.13</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>27d3f8bf-4445-4056-b5d9-5ab7f571a817</id>
+    <data class="PInterfacelogEntity">
+      <id>27d3f8bf-4445-4056-b5d9-5ab7f571a817</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/7c6d7ff9a9e59ee0470aa4926294a0c2.json</jsondata>
+      <cdate>2017-12-11 07:25:31.243</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>bc3ec2ed-337f-4111-a1b9-8dd1ad54cc1c</id>
+    <data class="PInterfacelogEntity">
+      <id>bc3ec2ed-337f-4111-a1b9-8dd1ad54cc1c</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171215/7c6d7ff9a9e59ee0470aa4926294a0c2.json</jsondata>
+      <cdate>2017-12-15 04:02:59.617</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>58a43fcc-4dd6-46e2-9a84-73075167fe4b</id>
+    <data class="PInterfacelogEntity">
+      <id>58a43fcc-4dd6-46e2-9a84-73075167fe4b</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180319/49b47b21a44580724567f97f4476eca3.json</jsondata>
+      <cdate>2018-03-19 09:07:04.563</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>88ea61bf-b476-4d04-819f-465894f53c55</id>
+    <data class="PInterfacelogEntity">
+      <id>88ea61bf-b476-4d04-819f-465894f53c55</id>
+      <subid>1921752d-99d9-47e1-b9d1-aee5204c22b1</subid>
+      <strsql>select  code , name, wb_code from sys_ks  order by code&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/49b47b21a44580724567f97f4476eca3.json</jsondata>
+      <cdate>2018-03-21 04:54:00.408</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>8a28ac87-4bb5-451d-a331-0b4632f24fa3</id>
+    <data class="PInterfacelogEntity">
+      <id>8a28ac87-4bb5-451d-a331-0b4632f24fa3</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:04:34.44</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>f9d7f95a-1e21-490b-9235-b1b085bd7ee3</id>
+    <data class="PInterfacelogEntity">
+      <id>f9d7f95a-1e21-490b-9235-b1b085bd7ee3</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:06:38.037</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>2e3b088e-5fc1-421b-a59c-ff518e705f1d</id>
+    <data class="PInterfacelogEntity">
+      <id>2e3b088e-5fc1-421b-a59c-ff518e705f1d</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:06:41.162</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>96060071-2cf0-457b-b027-17f10f675f7c</id>
+    <data class="PInterfacelogEntity">
+      <id>96060071-2cf0-457b-b027-17f10f675f7c</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:22:49.846</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>fd44ebda-3c26-4470-a8ed-474c0ff68929</id>
+    <data class="PInterfacelogEntity">
+      <id>fd44ebda-3c26-4470-a8ed-474c0ff68929</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:22:52.729</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>6b96fb4d-4a09-4746-b235-e9a564e5113c</id>
+    <data class="PInterfacelogEntity">
+      <id>6b96fb4d-4a09-4746-b235-e9a564e5113c</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:25:27.822</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>625084be-da4a-42b3-aafc-57cf0da001f1</id>
+    <data class="PInterfacelogEntity">
+      <id>625084be-da4a-42b3-aafc-57cf0da001f1</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:25:30.321</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>65422c22-f94a-4f8d-bff9-4bff7d836b00</id>
+    <data class="PInterfacelogEntity">
+      <id>65422c22-f94a-4f8d-bff9-4bff7d836b00</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 03:33:42.729</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>976614b0-b35c-463d-a94b-ea57f798aa8d</id>
+    <data class="PInterfacelogEntity">
+      <id>976614b0-b35c-463d-a94b-ea57f798aa8d</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 07:01:12.88</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>ea11af1a-fd3c-4c7f-bc70-4f6144188ff7</id>
+    <data class="PInterfacelogEntity">
+      <id>ea11af1a-fd3c-4c7f-bc70-4f6144188ff7</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 07:01:16.023</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>203181dd-fe6f-4655-bbf0-a23a5bd71494</id>
+    <data class="PInterfacelogEntity">
+      <id>203181dd-fe6f-4655-bbf0-a23a5bd71494</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 08:33:05.574</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>5df7ab3b-0cad-4a36-8c27-ab3f1c7da9c8</id>
+    <data class="PInterfacelogEntity">
+      <id>5df7ab3b-0cad-4a36-8c27-ab3f1c7da9c8</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 08:33:10.741</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>2ddda5e9-7f0e-4060-9e5c-dee272ecc8bc</id>
+    <data class="PInterfacelogEntity">
+      <id>2ddda5e9-7f0e-4060-9e5c-dee272ecc8bc</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 09:10:25.839</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>30cc0af4-7baf-4569-b9b8-6f01c0c207bc</id>
+    <data class="PInterfacelogEntity">
+      <id>30cc0af4-7baf-4569-b9b8-6f01c0c207bc</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 09:10:30.018</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>31aa1a47-6e79-4fa1-a0ac-b43edc66d251</id>
+    <data class="PInterfacelogEntity">
+      <id>31aa1a47-6e79-4fa1-a0ac-b43edc66d251</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 09:18:54.262</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>4e74d672-209c-41aa-b034-e522a53279c9</id>
+    <data class="PInterfacelogEntity">
+      <id>4e74d672-209c-41aa-b034-e522a53279c9</id>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <strsql>select * from sys_role_jgdm  where role_id in  (select role_id from Sys_User_Roles where uer_id = &apos;13B4518C-802E-449F-A434-04953E21052D&apos;) and is_browse =1&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20180321/055d5e449f4646e4d22cb70a055a54e9.json</jsondata>
+      <cdate>2018-03-21 09:19:35.921</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>06a4942c-fa41-4939-b540-4ea8e5963933</id>
+    <data class="PInterfacelogEntity">
+      <id>06a4942c-fa41-4939-b540-4ea8e5963933</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:05:59.029</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>d548d3fc-4f84-4526-9759-6b7ff997ebd8</id>
+    <data class="PInterfacelogEntity">
+      <id>d548d3fc-4f84-4526-9759-6b7ff997ebd8</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:08:26.389</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>e3de1919-2683-4330-9977-66cad0dcdb3a</id>
+    <data class="PInterfacelogEntity">
+      <id>e3de1919-2683-4330-9977-66cad0dcdb3a</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:10:24.276</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>baeb2f7e-ebf3-465d-a4be-9656765ba327</id>
+    <data class="PInterfacelogEntity">
+      <id>baeb2f7e-ebf3-465d-a4be-9656765ba327</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:11:49.169</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>7b2a1687-d168-490e-abf7-ad95250d0b2d</id>
+    <data class="PInterfacelogEntity">
+      <id>7b2a1687-d168-490e-abf7-ad95250d0b2d</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:15:10.788</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>69d09804-4fc2-4605-8915-70eb0fbe5b8a</id>
+    <data class="PInterfacelogEntity">
+      <id>69d09804-4fc2-4605-8915-70eb0fbe5b8a</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:19:59.05</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>f3b43cb9-733a-457b-a002-a8177bc43847</id>
+    <data class="PInterfacelogEntity">
+      <id>f3b43cb9-733a-457b-a002-a8177bc43847</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:22:27.403</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>ab8e5c55-a6d9-43a6-9781-4f8ed0eab158</id>
+    <data class="PInterfacelogEntity">
+      <id>ab8e5c55-a6d9-43a6-9781-4f8ed0eab158</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:22:45.848</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>45a896aa-243d-4aa4-bcc8-68c88ebea27e</id>
+    <data class="PInterfacelogEntity">
+      <id>45a896aa-243d-4aa4-bcc8-68c88ebea27e</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:26:03.412</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>c2265b40-443a-4a9a-9361-78efc28cd9a1</id>
+    <data class="PInterfacelogEntity">
+      <id>c2265b40-443a-4a9a-9361-78efc28cd9a1</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 06:27:04.822</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>d9b8772b-ce7a-46b4-beee-0254731ac31d</id>
+    <data class="PInterfacelogEntity">
+      <id>d9b8772b-ce7a-46b4-beee-0254731ac31d</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 07:25:27.23</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>9a693fa8-3033-4060-9498-b84c99f2c2fa</id>
+    <data class="PInterfacelogEntity">
+      <id>9a693fa8-3033-4060-9498-b84c99f2c2fa</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 07:26:05.759</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>906e02ac-c2cd-44db-a2c1-962c34182273</id>
+    <data class="PInterfacelogEntity">
+      <id>906e02ac-c2cd-44db-a2c1-962c34182273</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 07:26:08.868</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>513a3244-c932-4eaa-b07c-849caa5f2031</id>
+    <data class="PInterfacelogEntity">
+      <id>513a3244-c932-4eaa-b07c-849caa5f2031</id>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <strsql>select dm MDCdm, mc MDCmc from dic_MDC order by xh&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLITselect  d.dm DRGsdm, d.mc DRGsmc, m.dm MDCdm, m.mc MDCmc  from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)&#xd;
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT</strsql>
+      <jsondata>/20171211/00c8d54a51fb3dd51264a6b152d0e88a.json</jsondata>
+      <cdate>2017-12-11 07:29:59.016</cdate>
+      <estatus>0</estatus>
+    </data>
+  </STOREOBJ>
+</DATALIST>

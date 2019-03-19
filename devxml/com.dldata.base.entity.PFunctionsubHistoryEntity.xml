@@ -1,0 +1,90 @@
+<DATALIST>
+  <STOREOBJ>
+    <id>3b4f9b4e-f6ef-4115-b4fe-8b9ce2b2b5f5</id>
+    <data class="PFunctionsubHistoryEntity">
+      <id>3b4f9b4e-f6ef-4115-b4fe-8b9ce2b2b5f5</id>
+      <xh>0</xh>
+      <mc>用户机构数据查询</mc>
+      <dm>selectJgdm</dm>
+      <lx>5</lx>
+      <mainid>43ae8073-9058-4a76-9b5a-0ed4b6c6b783</mainid>
+      <sql></sql>
+      <datalx>0</datalx>
+      <bz>用户机构数据查询</bz>
+      <cacheflag>0</cacheflag>
+      <maxcachetime>0</maxcachetime>
+      <created>2018-03-21 02:45:31.487</created>
+      <edittime>2018-03-21 02:45:31.487</edittime>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <bftime>2018-03-21 02:50:15.982</bftime>
+      <bfversion>20180321105015</bfversion>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>8ac6f3d6-717f-45cc-8b4a-7e744fecc695</id>
+    <data class="PFunctionsubHistoryEntity">
+      <id>8ac6f3d6-717f-45cc-8b4a-7e744fecc695</id>
+      <xh>0</xh>
+      <mc>用户机构数据查询</mc>
+      <dm>selectJgdmRole</dm>
+      <lx>5</lx>
+      <mainid>43ae8073-9058-4a76-9b5a-0ed4b6c6b783</mainid>
+      <sql></sql>
+      <datalx>0</datalx>
+      <bz>用户机构数据查询</bz>
+      <cacheflag>0</cacheflag>
+      <maxcachetime>0</maxcachetime>
+      <created reference="../../../STOREOBJ/data/created"/>
+      <edittime>2018-03-21 02:50:16.006</edittime>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <bftime>2018-03-21 02:50:39.579</bftime>
+      <bfversion>20180321105039</bfversion>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>e5635384-1ba6-4c4e-bf91-7608bb40f0eb</id>
+    <data class="PFunctionsubHistoryEntity">
+      <id>e5635384-1ba6-4c4e-bf91-7608bb40f0eb</id>
+      <xh>0</xh>
+      <mc>用户机构数据查询</mc>
+      <dm>selectJgdmRole</dm>
+      <lx>5</lx>
+      <mainid>43ae8073-9058-4a76-9b5a-0ed4b6c6b783</mainid>
+      <sql></sql>
+      <datalx>0</datalx>
+      <bz>用户机构数据查询</bz>
+      <cacheflag>0</cacheflag>
+      <maxcachetime>0</maxcachetime>
+      <created reference="../../../STOREOBJ/data/created"/>
+      <edittime reference="../../../STOREOBJ[2]/data/edittime"/>
+      <subid>54bf96ee-ca24-4583-aba1-f8b6bdd59114</subid>
+      <bftime>2018-03-21 02:50:42.431</bftime>
+      <bfversion>20180321105042</bfversion>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>83931c0a-918e-49a6-9f8b-6d58e986cce7</id>
+    <data class="PFunctionsubHistoryEntity">
+      <id>83931c0a-918e-49a6-9f8b-6d58e986cce7</id>
+      <xh>0</xh>
+      <mc>病组数据查询</mc>
+      <dm>V_mdcCon_selectData</dm>
+      <lx>5</lx>
+      <mainid>a0960a8b-f19b-46b4-b21c-995b1df50e6e</mainid>
+      <sql></sql>
+      <datalx>0</datalx>
+      <bz>病组数据查询</bz>
+      <cacheflag>1</cacheflag>
+      <maxcachetime>86400</maxcachetime>
+      <created>2017-12-11 06:04:01.194</created>
+      <edittime>2017-12-11 06:04:01.194</edittime>
+      <subid>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</subid>
+      <bftime>2017-12-11 06:04:23.534</bftime>
+      <bfversion>20171211140423</bfversion>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+</DATALIST>

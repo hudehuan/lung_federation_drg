@@ -1,0 +1,77 @@
+<DATALIST>
+  <STOREOBJ>
+    <id>1921752d-99d9-47e1-b9d1-aee5204c22b1</id>
+    <data class="PFunctionsubEntity">
+      <id>1921752d-99d9-47e1-b9d1-aee5204c22b1</id>
+      <mc>科室数据查询</mc>
+      <dm>V_ksCon_selectKsData</dm>
+      <lx>5</lx>
+      <mainid>12d46fca-43a8-419b-9f6b-be0bd30ad8b6</mainid>
+      <sql>select 
+code ,
+name,
+wb_code
+from sys_ks 
+order by code</sql>
+      <datalx>0</datalx>
+      <bz>科室数据查询</bz>
+      <cacheflag>1</cacheflag>
+      <maxcachetime>86400</maxcachetime>
+      <created>2017-12-11 06:02:07.527</created>
+      <edittime>2017-12-11 06:02:07.527</edittime>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>54bf96ee-ca24-4583-aba1-f8b6bdd59114</id>
+    <data class="PFunctionsubEntity">
+      <id>54bf96ee-ca24-4583-aba1-f8b6bdd59114</id>
+      <mc>用户机构数据查询</mc>
+      <dm>selectJgdmRole</dm>
+      <lx>5</lx>
+      <mainid>43ae8073-9058-4a76-9b5a-0ed4b6c6b783</mainid>
+      <sql>select * from sys_role_jgdm 
+where role_id in 
+(select role_id from Sys_User_Roles where uer_id = &apos;#userid#&apos;) and is_browse =1</sql>
+      <datalx>0</datalx>
+      <bz>用户机构数据查询</bz>
+      <cacheflag>0</cacheflag>
+      <maxcachetime>0</maxcachetime>
+      <created>2018-03-21 02:45:31.487</created>
+      <edittime>2018-03-21 02:50:42.465</edittime>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</id>
+    <data class="PFunctionsubEntity">
+      <id>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</id>
+      <mc>病组数据查询</mc>
+      <dm>V_mdcCon_selectData</dm>
+      <lx>5</lx>
+      <mainid>a0960a8b-f19b-46b4-b21c-995b1df50e6e</mainid>
+      <sql>select
+dm MDCdm,
+mc MDCmc
+from dic_MDC
+order by xh 
+
+90C18768-611E-4752-BE6D-408476E59B6B-SPLIT
+
+select 
+d.dm DRGsdm,
+d.mc DRGsmc,
+m.dm MDCdm,
+m.mc MDCmc 
+from dic_drgs d left join dic_MDC m on RIGHT(m.dm,1) = left(d.dm,1)
+</sql>
+      <datalx>0</datalx>
+      <bz>病组数据查询</bz>
+      <cacheflag>1</cacheflag>
+      <maxcachetime>86400</maxcachetime>
+      <created>2017-12-11 06:04:01.194</created>
+      <edittime>2017-12-11 06:04:23.554</edittime>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+</DATALIST>

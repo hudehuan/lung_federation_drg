@@ -1,0 +1,41 @@
+<DATALIST>
+  <STOREOBJ>
+    <id>12d46fca-43a8-419b-9f6b-be0bd30ad8b6</id>
+    <data class="PFunctionmainEntity">
+      <id>12d46fca-43a8-419b-9f6b-be0bd30ad8b6</id>
+      <mc>科室控件</mc>
+      <dm>1</dm>
+      <pym>KSKJ</pym>
+      <xh>1</xh>
+      <flid>3317289d-a29a-48ae-b77c-6db133c9720b</flid>
+      <url></url>
+      <bz>科室控件</bz>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>43ae8073-9058-4a76-9b5a-0ed4b6c6b783</id>
+    <data class="PFunctionmainEntity">
+      <id>43ae8073-9058-4a76-9b5a-0ed4b6c6b783</id>
+      <mc>用户机构数据</mc>
+      <dm>3</dm>
+      <pym>YHJGSJ</pym>
+      <xh>3</xh>
+      <flid>3317289d-a29a-48ae-b77c-6db133c9720b</flid>
+      <url></url>
+      <bz></bz>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>a0960a8b-f19b-46b4-b21c-995b1df50e6e</id>
+    <data class="PFunctionmainEntity">
+      <id>a0960a8b-f19b-46b4-b21c-995b1df50e6e</id>
+      <mc>病组控件</mc>
+      <dm>2</dm>
+      <pym>BZKJ</pym>
+      <xh>2</xh>
+      <flid>3317289d-a29a-48ae-b77c-6db133c9720b</flid>
+      <url></url>
+      <bz></bz>
+    </data>
+  </STOREOBJ>
+</DATALIST>

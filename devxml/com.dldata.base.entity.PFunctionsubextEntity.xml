@@ -1,0 +1,26 @@
+<DATALIST>
+  <STOREOBJ>
+    <id>54bf96ee-ca24-4583-aba1-f8b6bdd59114</id>
+    <data class="PFunctionsubextEntity">
+      <id>54bf96ee-ca24-4583-aba1-f8b6bdd59114</id>
+      <apidesign></apidesign>
+      <requestjson>{}</requestjson>
+      <responsejson>{
+    &quot;msg&quot;: &quot;处理成功.&quot;,
+    &quot;success&quot;: true
+}</responsejson>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
+    <id>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</id>
+    <data class="PFunctionsubextEntity">
+      <id>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</id>
+      <apidesign></apidesign>
+      <requestjson>{}</requestjson>
+      <responsejson>{
+    &quot;success&quot;: true,
+    &quot;msg&quot;: &quot;处理成功.&quot;
+}</responsejson>
+    </data>
+  </STOREOBJ>
+</DATALIST>
