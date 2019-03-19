@@ -31,6 +31,7 @@
     <script type="text/javascript" src="${ctx }/static/js/layui/layui.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/hubeiCon.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/common.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/map.js"></script>
     <title></title>
     <style>
         body{overflow-y:auto;}
@@ -106,7 +107,17 @@
 </div>
 
 <div class="main" id="main">
-    <div id="item1" class="man-c-2" style="padding-top: 46px;">
+    <div id="item0" class="man-c-2" style="padding-top: 46px;">
+        <div class="bg-f" style="overflow: hidden;min-height:128px;">
+            <div class="zhibiao-top back-zb">
+                <b class="back-b">全国医院</b>
+            </div>
+            <div class="col-xs-6 zhibiao2" style="width: 100%;height: 400px" id="map1">
+
+            </div>
+        </div>
+    </div>
+    <div id="item1" class="man-c-2">
         <div class="bg-f" style="overflow: hidden;min-height:128px;">
             <div class="zhibiao-top back-zb">
                 <b class="back-b">医疗服务指标概览</b>
@@ -277,12 +288,14 @@
 <script type="text/javascript" src="${ctx}/static/js/layuiData.js"></script>
 <script type="text/javascript" src="${ctx }/static/js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="${ctx }/static/js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="${ctx }/static/js/china.js"></script>
 <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
 
 <script>
     $(function () {
         hubeiCon.initCon('sj-pt','sj-jb');
         hubeiCon.hospitalCon('sj-ks','sj-bz');
+        setMap()
     });
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function () {
@@ -444,7 +457,113 @@
            }
         });
     }
-
+    function setMap(){
+        var echart = echarts.init(document.getElementById('map1'));
+        var convertData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({
+                        name: data[i].name,
+                        value: geoCoord.concat(data[i].value)
+                    });
+                }
+            }
+            return res;
+        };
+        var option = {
+            backgroundColor: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 1,
+                y2: 1,
+                colorStops: [{
+                    offset: 0, color: '#D1D1D1' // 0% 处的颜色
+                }, {
+                    offset: 0.5, color: '#FFFFFF' // 100% 处的颜色
+                }, {
+                    offset: 1, color: '#D1D1D1' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+            },
+            title: {
+                text: '全国主要城市空气质量',
+                subtext: 'data from PM25.in',
+                sublink: 'http://www.pm25.in',
+                x:'center',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: function (params) {
+                    return params.name + ' : ' + params.value[2];
+                }
+            },
+            legend: {
+                orient: 'vertical',
+                y: 'bottom',
+                x:'right',
+                data:['pm2.5'],
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            visualMap: {
+                min: 0,
+                max: 200,
+                calculable: true,
+                color: ['#d94e5d','#eac736','#50a3ba'],
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            geo: {
+                map: 'china',
+                label: {
+                    emphasis: {
+                        show: false
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        areaColor: '#00467F',
+                        borderColor: '#111'
+                    },
+                    emphasis: {
+                        areaColor: '#2a333d'
+                    }
+                }
+            },
+            series: [
+                {
+                    name: 'pm2.5',
+                    type: 'scatter',
+                    coordinateSystem: 'geo',
+                    data: convertData(citydata),
+                    symbolSize: 12,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    itemStyle: {
+                        emphasis: {
+                            borderColor: '#fff',
+                            borderWidth: 1
+                        }
+                    }
+                }
+            ]
+        }
+        echart.setOption(option)
+    }
     function setData0(data){
         var tableData = data.rows.row[0];
         for(var i=0;i<tableData.cell.length;i++){
