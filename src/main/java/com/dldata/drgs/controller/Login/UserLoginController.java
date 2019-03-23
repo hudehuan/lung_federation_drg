@@ -342,7 +342,6 @@ public class UserLoginController {
         url.append("serverURL=").append(serverurl);
         result = "{\"success\":true,\"url\":\"" + url + "\"}";
 
-
         StringUtil.writeToWeb(result, "html", response);
         return null;
     }

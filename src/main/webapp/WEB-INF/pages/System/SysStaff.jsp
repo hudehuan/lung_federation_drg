@@ -47,6 +47,7 @@
                                 { field: 'zhiWei', title: '职位', width: '120px', align: 'left',sortable:true,  halign: 'center'},
                                 { field: 'yqName', title: '院区', width: '100px', align: 'left',sortable:true,  halign: 'center'},
                                 { field: 'ksName', title: '科室', width: '100px', align: 'left',sortable:true,  halign: 'center'},
+                                { field: 'xqName', title: '所属辖区', width: '100px', align: 'left',sortable:true,  halign: 'center'},
                                 { field: 'kswName', title: '护理工作站', width: '120px', align: 'left',sortable:true,  halign: 'center'},
                                 { field: 'operate', title: '操作', width: '75px', align: 'left', halign: 'center',
                                     formatter:function(value,row,index){

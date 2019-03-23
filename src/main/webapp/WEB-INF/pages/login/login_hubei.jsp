@@ -53,7 +53,7 @@
                 success: function(data) {
 
                     if(data.success == true){
-                        window.location.href = data.url;
+                        window.location.href = '/index/index';
                     }else{
                         layerInfo(data.msg);
                     }

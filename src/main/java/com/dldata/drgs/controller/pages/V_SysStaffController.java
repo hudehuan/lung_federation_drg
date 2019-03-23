@@ -57,7 +57,7 @@ public class V_SysStaffController {
         model.addAttribute("titlename", "人员列表");
         //mode.setViewName("System/SysStaff");
 
-        SysRoleMenuEntity roleMenuEntity = new SysRoleMenuEntity();
+             SysRoleMenuEntity roleMenuEntity = new SysRoleMenuEntity();
 
         List<SysRoleMenuEntity> sysRoleMenuEntityList = sysUserPowerCheckService.checkUserPower(menuCode, userid,sysCode);
 
@@ -99,6 +99,11 @@ public class V_SysStaffController {
                 }
                 model.addAttribute("staff", staff);
 
+
+                model.addAttribute("xqName","");
+                if(staff.getXqName()!=null){
+                    model.addAttribute("xqName", staff.getXqName());
+                }
                 if (ksName != null) {
                     model.addAttribute("ksName", ksName);
                 }

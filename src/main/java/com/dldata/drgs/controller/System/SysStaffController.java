@@ -148,6 +148,11 @@ public class SysStaffController {
                 map.put("code", s.getCode());
                 map.put("zhiCheng", "");
 
+                map.put("xqName","");
+                if(s.getXqName()!=null){
+                    map.put("xqName",s.getXqName());
+                }
+
                 if (s.getZhiCheng() != null) {
                     String zhiCheng = setDicItemName(dictionaryConfig.getZhiChengCode(), s.getZhiCheng(), sysCode);
                     map.put("zhiCheng", zhiCheng);
@@ -245,7 +250,7 @@ public class SysStaffController {
                 map.put("name", s.getName());
                 map.put("code", s.getCode());
                 map.put("zhiCheng", "");
-
+                map.put("xqName",s.getXqName());
                 if (s.getZhiCheng() != null) {
                     String zhiCheng = setDicItemName(dictionaryConfig.getZhiChengCode(), s.getZhiCheng(), sysCode);
                     map.put("zhiCheng", zhiCheng);
@@ -314,6 +319,7 @@ public class SysStaffController {
                     }
                 }
             }
+
             if (!staff.getName().equals("")) {
                 staff.setPym(StringUtil.getPinYinHeadChar(staff.getName()));
             }
@@ -323,6 +329,7 @@ public class SysStaffController {
             if (staff.getKsId().equals("")) {
                 staff.setKsId(null);
             }
+           // request.getParameter("")
             staff.setStatus(1);
             sysStaffService.save(staff);
             result = "{\"success\":true,\"msg\":\"保存成功！\"}";

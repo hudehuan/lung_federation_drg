@@ -20,6 +20,7 @@ public class SysStaffEntity {
     private String zhiCheng;
     private String zhiWei;
     private String weiyiCode;
+    private String xqName;
 
     @Id
     @Column(name = "id")
@@ -40,6 +41,12 @@ public class SysStaffEntity {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Basic
+    @Column(name = "xia_qu")
+    public String getXqName() {return xqName;}
+
+    public void setXqName(String xqName) {this.xqName = xqName;}
 
     @Basic
     @Column(name = "code")
