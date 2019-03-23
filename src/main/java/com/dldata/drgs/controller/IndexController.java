@@ -204,7 +204,7 @@ public class IndexController {
         InputStreamReader in = null;
         try {
             Properties prop = new Properties();
-            in = new InputStreamReader(this.getClass().getResourceAsStream("/sysconfig.properties"));
+            in = new InputStreamReader(this.getClass().getResourceAsStream("/sysconfig.properties"),"utf-8");
             BufferedReader bf = new BufferedReader(in);
             prop.load(bf);
 
