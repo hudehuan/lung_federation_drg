@@ -381,7 +381,7 @@
                 bivar = bivar.replace("全部","|@novalue|@novalue|");
             }
         }
-        if(parent.userType=='市级'||parent.userType=='省级'){
+        if(parent.userType=='省级'||parent.userType=='全国'){
             yydm=$("#dept option:checked").text();
             if(!yydm||yydm=='全部'){
                 yydm = '@novalue';

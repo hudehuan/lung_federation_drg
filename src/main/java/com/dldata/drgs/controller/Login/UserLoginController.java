@@ -321,7 +321,7 @@ public class UserLoginController {
         StringBuilder url = new StringBuilder();
 
         session.removeAttribute("indexUrl");
-        if(sysUserInfoPtEntity != null && sysUserInfoPtEntity.getUserType() != null && (sysUserInfoPtEntity.getUserType().equals("省级")||sysUserInfoPtEntity.getUserType().equals("市级"))){
+        if(sysUserInfoPtEntity != null && sysUserInfoPtEntity.getUserType() != null && (sysUserInfoPtEntity.getUserType().equals("全国")||sysUserInfoPtEntity.getUserType().equals("省级"))){
             SysDictionaryItemEntity sysDictionaryItemEntity = sysDictionaryItemService.findOneByCode(sysUserInfoPtEntity.getUserType());
             if(sysDictionaryItemEntity!=null){
                 String dir = directoryConfig.getLogin_dir();
@@ -669,7 +669,7 @@ public class UserLoginController {
             StringBuilder url = new StringBuilder();
 
             session.removeAttribute("indexUrl");
-            if (sysUserInfoPtEntity != null && sysUserInfoPtEntity.getUserType() != null && (sysUserInfoPtEntity.getUserType().equals("省级") || sysUserInfoPtEntity.getUserType().equals("市级"))) {
+            if (sysUserInfoPtEntity != null && sysUserInfoPtEntity.getUserType() != null && (sysUserInfoPtEntity.getUserType().equals("全国") || sysUserInfoPtEntity.getUserType().equals("省级"))) {
                 SysDictionaryItemEntity sysDictionaryItemEntity = sysDictionaryItemService.findOneByCode(sysUserInfoPtEntity.getUserType());
                 if (sysDictionaryItemEntity != null) {
                     String dir = directoryConfig.getLogin_dir();

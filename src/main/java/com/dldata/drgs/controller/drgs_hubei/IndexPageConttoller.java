@@ -54,7 +54,7 @@ public class IndexPageConttoller {
         if(sysUserInfoEntity.getLoginName().equalsIgnoreCase("admin")){
             model.addAttribute("peizhi","peizhi");
         }
-        if(sysUserInfoPtEntity!=null && sysUserInfoPtEntity.getUserType() != null && sysUserInfoPtEntity.getUserType().equals("市级")){
+        if(sysUserInfoPtEntity!=null && sysUserInfoPtEntity.getUserType() != null && sysUserInfoPtEntity.getUserType().equals("省级")){
             List<DicJgdmEntity> dicJgdmEntity = dicJgdmService.findInfoByUserId(userid);
             String shi = "";
             int num =0;

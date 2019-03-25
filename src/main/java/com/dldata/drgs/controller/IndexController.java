@@ -145,11 +145,11 @@ public class IndexController {
         if(sysUserInfoPtEntity!=null){
             userType = sysUserInfoPtEntity.getUserType();
             switch (userType){
-                case "省级":
-                    indexName = "全省";
+                case "全国":
+                    indexName = "全国";
                     break;
-                case "市级":
-                    indexName = "本市州";
+                case "省级":
+                    indexName = "本省";
                     break;
                 case "机构":
                     indexName = "本院";

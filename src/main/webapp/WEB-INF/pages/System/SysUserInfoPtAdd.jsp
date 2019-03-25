@@ -185,8 +185,8 @@
             <div class="div_h" style="padding: 10px 0px;">
                 <label for="homePageId">角色类型&nbsp;&nbsp;</label>
                 <select name="userType" id="userType" style="padding:2px 0px; width:100px; " class="bi-width80 form-control">
+                    <option value="全国">全国</option>
                     <option value="省级">省级</option>
-                    <option value="市级">市级</option>
                     <option value="机构">机构</option>
                 </select>
             </div>

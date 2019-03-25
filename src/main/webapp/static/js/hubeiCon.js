@@ -17,17 +17,17 @@ var hubeiCon = {
             biArray[1] = "全部";
         }
         if(biArray[0]=="@novalue"){
-            biArray[0] = "全省";
+            biArray[0] = "全国";
             if(biArray[1]=="全部"){
                 biArray[1] = "";
             }
         }
         switch (userType){
-            case "省级" :
+            case "全国" :
                 $("#"+ptDm).show();
                 $("#"+ptDm).val(biArray[0]+biArray[1]+biArray[2]);
                 break;
-            case "市级" :
+            case "省级" :
                 $("#"+jbDm).show();
                 $("#"+jbDm).val(biArray[0]+biArray[1]+biArray[2]);
                 break;
@@ -54,7 +54,7 @@ var hubeiCon = {
             $('.layui-layer-tips').hide();
         });
         $('body').on('click',".dengji .jibei-yiyuan",function(){
-            if(userType == "市级") return;
+            if(userType == "省级") return;
             $(".shenji-pintai").show();
             $(".jibei-yiyuan").hide();
         });

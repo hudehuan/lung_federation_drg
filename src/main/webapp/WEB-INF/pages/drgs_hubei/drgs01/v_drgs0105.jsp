@@ -388,10 +388,10 @@
         }
         //查询条件
         bivar = $('#sj-jb').val();
-        if(bivar == "全省"){
+        if(bivar == "全国"){
             bivar = "@novalue|@novalue|@novalue|";
         }else {
-            bivar = bivar.replace("全省","@novalue");
+            bivar = bivar.replace("全国","@novalue");
             if(bivar.indexOf("二级")>-1||bivar.indexOf("三级")>-1|| bivar.indexOf("所有") > -1){
                 bivar = bivar.replace("二级","|二级|");
                 bivar = bivar.replace("三级","|三级|");
@@ -404,7 +404,7 @@
                 bivar = bivar.replace("全部","|@novalue|@novalue|");
             }
         }
-        if("${userType}"=='市级'||"${userType}"=='省级'){
+        if("${userType}"=='省级'||"${userType}"=='全国'){
             yydm=$("#dept option:checked").text();
             if(!yydm||yydm=='全部'){
                 yydm = '@novalue';

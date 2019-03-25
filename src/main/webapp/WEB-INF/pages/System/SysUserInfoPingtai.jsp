@@ -335,8 +335,8 @@
         <%--<input type="text" id="serachks" class="form-control"placeholder="名称、拼音码、代码查询" />--%>
         <select id="userType">
             <option value="">全部</option>
+            <option value="全国">全国</option>
             <option value="省级">省级</option>
-            <option value="市级">市级</option>
             <option value="机构">机构</option>
         </select>
 

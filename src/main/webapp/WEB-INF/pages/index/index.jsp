@@ -63,7 +63,7 @@
             },5000);
 
             //$.ajaxSettings.async = false;
-            if(userType =="省级") $("#fhzt").show();
+            if(userType =="全国") $("#fhzt").show();
             if("${bivar}"=="配置"){
                 bivar = "@novalue|@novalue|@novalue|";
                 $.getJSON("/sysMenu/getSysMenu?r="+Math.random(),function (data) {
@@ -82,16 +82,16 @@
                         '<img src="/static/img/wd-icon.png">' +
                         '</span>操作指南</a>' +
                         '</li>';
-                }else if (userType=="市级"){
+                }else if (userType=="省级"){
                     html = '<li class="li-c">' +
-                        '<a href="/static/file/操作指南（地市）.docx" data-index="000000">' +
+                        '<a href="/static/file/操作指南（省）.docx" data-index="000000">' +
                         '<span class="icon-tu">' +
                         '<img src="/static/img/wd-icon.png">' +
                         '</span>操作指南</a>' +
                         '</li>';
-                }else if (userType=="省级"){
+                }else if (userType=="全国"){
                     html = '<li class="li-c">' +
-                        '<a href="/static/file/操作指南（省级）.docx" data-index="000000">' +
+                        '<a href="/static/file/操作指南（全国）.docx" data-index="000000">' +
                         '<span class="icon-tu">' +
                         '<img src="/static/img/wd-icon.png">' +
                         '</span>操作指南</a>' +
@@ -362,7 +362,7 @@
                 });
             }
         });
-    }else if('${userType}'=='市级'){
+    }else if('${userType}'=='省级'){
         var cs="${bivar}".split("|")[0];
         $.ajax({
             type:"POST",
