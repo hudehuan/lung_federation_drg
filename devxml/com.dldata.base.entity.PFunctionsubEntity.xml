@@ -43,6 +43,24 @@ where role_id in
     </data>
   </STOREOBJ>
   <STOREOBJ>
+    <id>21db1d40-be29-4543-a8b6-69912e257f36</id>
+    <data class="PFunctionsubEntity">
+      <id>21db1d40-be29-4543-a8b6-69912e257f36</id>
+      <mc>查询所属辖区</mc>
+      <dm>selectxqName</dm>
+      <lx>5</lx>
+      <mainid>7a9f3081-300f-4cb0-8047-ba0cebddd2f0</mainid>
+      <sql>select name,pym from Sys_Staff where xia_qu like &apos;%#xqName#%&apos;;</sql>
+      <datalx>0</datalx>
+      <bz>查询所属辖区</bz>
+      <cacheflag>0</cacheflag>
+      <maxcachetime>0</maxcachetime>
+      <created>2019-03-23 07:26:49.733</created>
+      <edittime>2019-03-25 03:05:25.886</edittime>
+      <sqltype>replaceconcat</sqltype>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
     <id>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</id>
     <data class="PFunctionsubEntity">
       <id>e4691e03-b9b1-42db-8c58-06e90ac1f8ed</id>

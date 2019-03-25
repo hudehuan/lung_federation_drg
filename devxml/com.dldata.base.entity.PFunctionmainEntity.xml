@@ -26,6 +26,19 @@
     </data>
   </STOREOBJ>
   <STOREOBJ>
+    <id>7a9f3081-300f-4cb0-8047-ba0cebddd2f0</id>
+    <data class="PFunctionmainEntity">
+      <id>7a9f3081-300f-4cb0-8047-ba0cebddd2f0</id>
+      <mc>测试</mc>
+      <dm>4</dm>
+      <pym>CS</pym>
+      <xh>4</xh>
+      <flid>3317289d-a29a-48ae-b77c-6db133c9720b</flid>
+      <url></url>
+      <bz></bz>
+    </data>
+  </STOREOBJ>
+  <STOREOBJ>
     <id>a0960a8b-f19b-46b4-b21c-995b1df50e6e</id>
     <data class="PFunctionmainEntity">
       <id>a0960a8b-f19b-46b4-b21c-995b1df50e6e</id>

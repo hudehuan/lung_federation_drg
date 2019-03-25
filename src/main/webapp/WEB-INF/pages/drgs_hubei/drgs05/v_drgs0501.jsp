@@ -32,6 +32,7 @@
     <script type="text/javascript" src="${ctx}/static/js/hubeiCon.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/common.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/map.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/dlcommon.js"></script>
     <title></title>
     <style>
         body{overflow-y:auto;}
@@ -57,6 +58,40 @@
         }
         .fixed-table-container{
             border:none;
+        }
+        .duibi-content-title{
+            background: #fff;
+            bottom: 10px;
+            top: 100px;
+            overflow-y: auto;
+        }
+        .duibi-content-title .btn-qz{
+            width:auto;
+            text-align: center;
+            border-radius: 3px;
+            float: left;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+        .duibi-content-title ul li a.active {
+            border: none;
+            color: #fff;
+            background: #ef8834;
+            border-radius: 40px;
+        }
+        .duibi-content-title ul li a {
+            float: left;
+            width: 54px;
+            height: 25px;
+            min-width: 50px;
+            text-align: center;
+            color: #aaa;
+            font-size: 12px;
+            border:none;
+            line-height: 25px;
+            margin: 0px;
+            cursor: pointer;
+            overflow: hidden;
         }
         .pagination{
             margin-right: 4px;
@@ -115,6 +150,15 @@
             <div class="col-xs-6 zhibiao2" style="width: 100%;height: 400px;padding-top: 20px" id="map1">
 
             </div>
+        </div>
+    </div>
+    <div id="yyName" class="man-c-2" style="display: none">
+        <div class="zhibiao-top back-zb">
+            <b class="back-b">辖区医院名称</b>
+            <a href="###" id="daochuName" class="daochu">导出</a>
+        </div>
+        <div id="yyName1" class="zhibiao-top back-zb duibi-content-title" style="height:100px; padding-top:15px;height:auto !important; min-height:100px">
+
         </div>
     </div>
     <div id="item1" class="man-c-2">
@@ -863,6 +907,7 @@
                                 font: style.font
                             },
                             onclick: function() {
+                                document.getElementById("yyName").style.display='none';
                                 handleEvents.resetOption(chart, option, '中国');
                             }
                         }, {
@@ -982,7 +1027,7 @@
             // 添加事件
             chart.on('click', function(params) {
                 var _self = this;
-                if (opt.goDown && params.name !== name[idx]) {debugger
+                if (opt.goDown && params.name !== name[idx]) {
                     if (cityMap[params.name]) {
                         var url = cityMap[params.name];
                         $.get(url, function(response) {
@@ -990,7 +1035,26 @@
                             curGeoJson = response;
                             echarts.registerMap(params.name, response);
                             handleEvents.resetOption(_self, option, params.name);
-                            alert("ooo")
+                          var postdata = {p_dm: "selectxqName",xqName:params.name};
+                           dLong.getJSON("/commapiV2",postdata,function(data){
+                             if (data.success) {
+                                 var thtml='';
+                                 thtml+='<div class="hangtr">';
+                                 thtml+='<ul class="active" style="height:100px; height:auto !important; min-height:100px">';
+                                 // thtml+='<div class="title-zb">'+data1.name+'：</div>';
+                                 $.each(data.Table,function(index,data1){
+                                    thtml+='<li ><a data-id="'+index+'" value="'+data1.pym+'" style="width:'+data1.name.length*19+'px;">'+data1.name+'</a></li>';
+                                   // thtml+='</div>';
+                                })
+                                 thtml+='</ul>';
+                                 thtml+='</div>';
+                                 $("#yyName1").html(thtml);
+                                 if(data.Table.length>0){
+                                     document.getElementById("yyName").style.display="";
+                                 }
+                              }
+                          },true);
+
                         });
                     }
                 }
@@ -1018,6 +1082,7 @@
             return chart;
         };
 
+
         $.getJSON(zhongguo, function(geoJson) {
             echarts.registerMap('中国', geoJson);
             var myChart = echarts.extendsMap('chart-panel', {
@@ -1035,6 +1100,23 @@
             });
         })
     }
+
+
+    $('#yyName1').delegate(" li a", 'click',function(){
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else{
+            $('.duibi-content-title ul li a').removeClass("active");
+            $(this).toggleClass("active");
+        }
+        /*$("#targetxx li a").removeClass("active");
+         if(selectid!=''){
+         $('li a[data-id='+ selectid+']').addClass("active");
+         }
+         $(this).toggleClass("active");
+         selectid=$(this).attr("data-id");*/
+    })
+
     function setData0(data){
         var tableData = data.rows.row[0];
         for(var i=0;i<tableData.cell.length;i++){

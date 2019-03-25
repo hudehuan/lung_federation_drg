@@ -326,6 +326,7 @@
         $('#topmenu').css('min-height',F);
     })
     var biIds=['3ab277a3-1121-4517-8369-fd20165655ad'];
+
     if('${userType}'=='机构'){
         $.ajax({
             type:"POST",
