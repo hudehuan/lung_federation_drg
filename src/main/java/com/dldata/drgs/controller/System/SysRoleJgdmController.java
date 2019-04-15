@@ -40,7 +40,7 @@ public class SysRoleJgdmController {
     @ResponseBody
     public List<RoleJgdm> getJgdmByRoleID(String roleId, @CookieValue(value = "syscode",defaultValue = "") String sysCode){
 
-        List<DicXzqhEntity> dicXzqhEntities = dicXzqhService.getAllData().stream().filter(x ->x.getDm().length()==4).collect(Collectors.toList());
+        List<DicXzqhEntity> dicXzqhEntities = dicXzqhService.getAllData().stream().filter(x ->x.getDm().length()==2).collect(Collectors.toList());
 
         List<DicJgdmEntity> dicJgdmEntities = dicJgdmService.getAllData();
 

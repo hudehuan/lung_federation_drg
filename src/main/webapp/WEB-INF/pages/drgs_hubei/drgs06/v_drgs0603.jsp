@@ -93,8 +93,6 @@
                 <input hidden style="width: 150px; height: 24px;border-radius:2px;cursor: pointer" class="sj-jb"
                        id="sj-jb" readonly="readonly" value="" type="text" placeholder="平台机构选择"/>
                 <input  style="width: 150px; height: 24px;border-radius:2px;cursor: pointer"
-                        class="sj-ks" id="sj-ks" readonly="readonly" value="" type="text" placeholder="科室选择" />
-                <input  style="width: 150px; height: 24px;border-radius:2px;cursor: pointer"
                         class="sj-bz" id="sj-bz"  readonly="readonly" value="" type="text" placeholder="DRGs病组选择" />
             </div>
         </li>
@@ -155,8 +153,8 @@
 <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
 <script>
     $(function () {
-        hubeiCon.initCon('sj-pt','sj-jb');
-        hubeiCon.hospitalCon('sj-ks','sj-bz');
+        hubeiCon.initCon('sj-pt');
+        hubeiCon.hospitalCon('sj-bz');
     });
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function () {
@@ -242,34 +240,18 @@
                 return false;
             }
         })
-        if(bivar == "全省"){
+        //查询条件
+        bivar = $('#sj-pt').val();
+        if(bivar == "全国"){
             bivar = "@novalue|@novalue|@novalue|";
         }else {
-            bivar = bivar.replace("全省","@novalue");
-            if(bivar.indexOf("二级")>-1||bivar.indexOf("三级")>-1|| bivar.indexOf("所有") > -1){
-                bivar = bivar.replace("二级","|二级|");
-                bivar = bivar.replace("三级","|三级|");
-                bivar = bivar.replace("所有","|@novalue|");
-                if(bivar.indexOf("全部")>-1){
-                    bivar = bivar.replace("全部","@novalue")
-                }
-                bivar += "|";
-            }else{
-                bivar = bivar.replace("全部","|@novalue|@novalue|");
-            }
+
+            bivar +="|@novalue|@novalue|";
+
         }
-        kstj = '@novalue|';
+
         mdctj = '@novalue|';
-        if(hubeiCon.ksTreeData.length>0){
-            kstj = '';
-            for(var i=0;i<hubeiCon.ksTreeData.length;i++){
-                kstj+=hubeiCon.ksTreeData[i].code;
-                if(i<hubeiCon.ksTreeData.length-1){
-                    kstj+=",";
-                }
-            }
-            kstj += '|';
-        }
+
         if(hubeiCon.mdcTreeData.length>0){
             mdctj = "";
             for(var i=0;i<hubeiCon.mdcTreeData.length;i++){
@@ -287,7 +269,7 @@
         var yyjb = $("#yyjb").val();
         //费用增幅与机构动因 （费用动因分析）
         var cxsj = hubeiCon.getTimeStr();
-        var cxtj0 = cxsj+ "|"+kstj+mdctj;
+        var cxtj0 = cxsj+ "|"+mdctj;
         loads++;
         var url0 ='${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar='+escape(escape(bivar))+
             '&biyccs=&id=' +biKeys[0].id+'&softkey='+biKeys[0].softkey +

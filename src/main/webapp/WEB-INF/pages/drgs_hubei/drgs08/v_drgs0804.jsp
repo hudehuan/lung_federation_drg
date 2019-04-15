@@ -150,7 +150,7 @@
     <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
     <script>
         $(function () {
-            hubeiCon.hospitalCon('sj-ks','sj-bz');
+            hubeiCon.hospitalCon('sj-bz');
         });
         //获取屏幕的高
         var H= 0;

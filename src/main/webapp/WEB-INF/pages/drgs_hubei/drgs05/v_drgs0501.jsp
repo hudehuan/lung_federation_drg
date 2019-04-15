@@ -85,7 +85,7 @@
             height: 25px;
             min-width: 50px;
             text-align: center;
-            color: #aaa;
+            color: black;
             font-size: 12px;
             border:none;
             line-height: 25px;
@@ -132,8 +132,6 @@
         <li>
             <div class="center-back-cs">
                 <input  style="width: 150px; height: 24px;border-radius:2px;cursor: pointer"
-                        class="sj-ks" id="sj-ks" readonly="readonly" value="" type="text" placeholder="科室选择" />
-                <input  style="width: 150px; height: 24px;border-radius:2px;cursor: pointer"
                         class="sj-bz" id="sj-bz"  readonly="readonly" value="" type="text" placeholder="DRGs病组选择" />
             </div>
         </li>
@@ -142,16 +140,18 @@
 </div>
 
 <div class="main" id="main">
-    <div id="item0" class="man-c-2" style="padding-top: 46px;">
-        <div class="bg-f" style="overflow: hidden;min-height:128px;">
-            <div class="zhibiao-top back-zb">
-                <b class="back-b">全国医院</b>
-            </div>
-            <div class="col-xs-6 zhibiao2" style="width: 100%;height: 400px;padding-top: 20px" id="map1">
+  <c:if test="${userType=='全国'}">
+        <div id="item0" class="man-c-2" style="padding-top: 46px;">
+            <div class="bg-f" style="overflow: hidden;min-height:128px;">
+                <div class="zhibiao-top back-zb">
+                    <b class="back-b">全国医院</b>
+                </div>
+                <div class="col-xs-6 zhibiao2" style="width: 100%;height: 400px;padding-top: 20px" id="map1">
 
+                </div>
             </div>
         </div>
-    </div>
+  </c:if>
     <div id="yyName" class="man-c-2" style="display: none">
         <div class="zhibiao-top back-zb">
             <b class="back-b">辖区医院名称</b>
@@ -169,30 +169,6 @@
             </div>
             <div class="col-xs-6 zhibiao2" style="width: 100%;" id="tabx1">
                 <div class="table-responsive" style="margin-top: 15px;">
-                    <table id="tableJg" class="tab-a table table-bordered back-jodh" style="margin-bottom: 0px;display: none">
-                        <tr>
-                            <td>入组医疗机构总数：<span id="jg_td10" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>三级医院：<span id="jg_td0" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>其中：三级综合医院 <span id="jg_td1" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>三级专科医院 <span id="jg_td11" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>三级中医院 <span id="jg_td12" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>三级妇幼医院 <span id="jg_td13" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>甲等 <span id="jg_td2" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>乙等 <span id="jg_td3" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>未定等 <span id="jg_td4" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>二级医院：<span id="jg_td5" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>其中：二级综合医院 <span id="jg_td6" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>二级专科医院 <span id="jg_td14" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>二级中医院 <span id="jg_td15" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>二级妇幼医院 <span id="jg_td16" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>甲等 <span id="jg_td7" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>乙等 <span id="jg_td8" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                            <td>未定等 <span id="jg_td9" style="font-weight: 700 ;color: #f58839"></span> 家</td>
-                        </tr>
-                    </table>
                     <table id="tablePt" class="tab-a table table-bordered back-jodh" style="margin-bottom: 0px;">
                         <tr>
                             <td><span id="dt" style="font-size:18px;color: blue "></span></td>
@@ -338,9 +314,9 @@
 
 <script>
     $(function () {
-        hubeiCon.initCon('sj-pt','sj-jb');
-        hubeiCon.hospitalCon('sj-ks','sj-bz');
-        setMap()
+        hubeiCon.initCon('sj-pt');
+        hubeiCon.hospitalCon('sj-bz');
+
     });
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function () {
@@ -355,9 +331,10 @@
     //获取屏幕的高
     var H = 0;
     var loads = 0;
-    var biIds = '38e9a7ad-74a9-47e8-8405-4ad673a9144e$8f23c96f-0210-4589-88e6-a8794e148198$1527a9f1-27d4-4eef-996b-7beb98d4defd$ec134a28-85f0-483f-bd66-712e380bdc6a';//报表id
+    var biIds = '8f23c96f-0210-4589-88e6-a8794e148198$1527a9f1-27d4-4eef-996b-7beb98d4defd$ec134a28-85f0-483f-bd66-712e380bdc6a';//报表id
     var biKeys = [];//报表返回softkey
     var flag = true,datas;
+    var hosName='@novalue';
     $(function () {
         $(window).scroll(function () {
             var items = $(".main").find(".man-c-2");
@@ -387,7 +364,9 @@
         });
         H = $('#top-demand').height();
         $('.main-center').css('padding-top', H + 'px');
-
+        if("${userType}"=="全国"){
+            setMap()
+        }
         $.ajax({
             type: "POST",
             url: "/HBI/loadBiKsy?biIds=" + biIds,
@@ -399,39 +378,30 @@
         });
         $('.top-btn').click(function () {
             flag=false;
+            bivar = '';
             search();
         })
-        if("${userType}"!='机构'){
-            $("#tableJg").show();
-        }
+
         var date = new Date;
         var year = date.getFullYear();
         $("#rq").val(year);
     })
-
+    var bivar=''
     function search() {
+
         $("#loading").show();
-        var bivar = '';
-        var hosName='@novalue';
-        var bivars = "${bivar}".split("|");
-        if(bivars[0]=='全省'){
-            bivars[0]='@novalue|'
-        }
-        if("${userType}"=='机构'){
-            hosName="${hosName}";
-        }
-        var kstj = '@novalue|';
-        var mdctj = '@novalue|';
-        if(hubeiCon.ksTreeData.length>0){
-            kstj = '';
-            for(var i=0;i<hubeiCon.ksTreeData.length;i++){
-                kstj+=hubeiCon.ksTreeData[i].code;
-                if(i<hubeiCon.ksTreeData.length-1){
-                    kstj+=",";
-                }
+        if(bivar ==''){
+            if("${userType}" == "全国"||"${userType}"=='机构'){
+                bivar = "";
+            }else {
+                bivar ="${staffname}";
             }
-            kstj += '|';
+            if("${userType}"=='机构'){
+                hosName="${hosName}";
+            }
         }
+        var mdctj = '@novalue|';
+
         if(hubeiCon.mdcTreeData.length>0){
             mdctj = "";
             for(var i=0;i<hubeiCon.mdcTreeData.length;i++){
@@ -449,12 +419,12 @@
         var rq = $("#rq").val();
         var rqkj = $("#rqkj").val();
         var cxsj = hubeiCon.getTimeStr();
-        var cxtj0 = cxsj+"|"+hosName+"|";
-        var cxtj1 = cxsj+"|"+kstj+mdctj+hosName+"|";
+        var cxtj0 = cxsj+"|"+mdctj+hosName+"|";
+        var cxtj1 = cxsj+"|"+mdctj+hosName+"|";
         loads++;
-        var url0 = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar='+ escape(escape(bivars[0]))+
+        var url0 = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar='+ escape(escape(bivar))+
             '&biyccs=&id=' + biKeys[0].id + '&softkey=' + biKeys[0].softkey +
-            '&cxtj=' + escape(cxtj0+"$"+cxtj1+"$"+cxtj1+"$"+cxtj1) + '&topdata=&timew=&weiplan=';
+            '&cxtj=' + escape(cxtj0+"$"+cxtj1+"$"+cxtj1) + '&topdata=&timew=&weiplan=';
         $.ajax({
             type: "GET",
             url: url0,
@@ -462,25 +432,23 @@
             success: function (data) {
                 loads--;
                 test(loads);
-                data0 = jsonpDataInit(data[0]);
-                setData0(data0);
                 //2
                 $("#dt").text(rq+(rqkj=="n"?"年度":""));
-                data1 = jsonpDataInit(data[1]);
+                data1 = jsonpDataInit(data[0]);
                 setData1(data1);
                 //3
-                data2 = jsonpDataInit(data[2]);
+                data2 = jsonpDataInit(data[1]);
                 setData2(data2)
                 //4
 //                if(kstj='@novalue|'&&data[3].rows.row){
 //                    data[3].rows.row.length=10
 //                 }
-                data3 = jsonpDataInit(data[3]);
+                data3 = jsonpDataInit(data[2]);
                 datas=data3;
                 $("#a1").parent('li').siblings('li').children('a').removeClass('active');
                 $("#a1").addClass('active');
                 var dataIndex = [0,1,3,2];
-                setData4(data[3],dataIndex[2]);
+                setData4(data[2],dataIndex[2]);
                 loadTableData(datas,dataIndex);
                 $('#tabList li a').click(function () {
                     if($(this).hasClass("active")){return }
@@ -907,7 +875,6 @@
                                 font: style.font
                             },
                             onclick: function() {
-                                document.getElementById("yyName").style.display='none';
                                 handleEvents.resetOption(chart, option, '中国');
                             }
                         }, {
@@ -1043,14 +1010,14 @@
                                  thtml+='<ul class="active" style="height:100px; height:auto !important; min-height:100px">';
                                  // thtml+='<div class="title-zb">'+data1.name+'：</div>';
                                  $.each(data.Table,function(index,data1){
-                                    thtml+='<li ><a data-id="'+index+'" value="'+data1.pym+'" style="width:'+data1.name.length*19+'px;">'+data1.name+'</a></li>';
+                                    thtml+='<li ><a data-id="'+index+'" value="'+data1.name+'" style="width:'+data1.name.length*19+'px;">'+data1.name+'</a></li>';
                                    // thtml+='</div>';
                                 })
                                  thtml+='</ul>';
                                  thtml+='</div>';
                                  $("#yyName1").html(thtml);
                                  if(data.Table.length>0){
-                                     document.getElementById("yyName").style.display="";
+                                     $("#yyName").show()
                                  }
                               }
                           },true);
@@ -1092,10 +1059,16 @@
                 goDown: true, // 是否下钻
                 // 下钻回调
                 callback: function(name, option, instance) {
-                    //console.log(name, option, instance);
+                    if(name=="中国"){
+                        $("#yyName").hide();
+                        bivar =''
+                    }else{
+                        bivar =name;
+                    }
+                    search()
                 },
                 // 数据展示
-                data: [{city:'内蒙古',name: "某某",value: '某某第一医院',id:'111112'},
+                data: [{city:'内蒙古',name: "某某",value: '某某第一医院',id:'111112'}
                   ]
             });
         })
@@ -1108,21 +1081,11 @@
         }else{
             $('.duibi-content-title ul li a').removeClass("active");
             $(this).toggleClass("active");
+            hosName = $(this).attr("value");
+            search()
         }
-        /*$("#targetxx li a").removeClass("active");
-         if(selectid!=''){
-         $('li a[data-id='+ selectid+']').addClass("active");
-         }
-         $(this).toggleClass("active");
-         selectid=$(this).attr("data-id");*/
     })
 
-    function setData0(data){
-        var tableData = data.rows.row[0];
-        for(var i=0;i<tableData.cell.length;i++){
-            $("#jg_td"+i).text(tableData.cell[i]);
-        }
-    }
     function setData1(data){
         var tableData = data.rows.row[0];
         for(var i=0;i<tableData.cell.length;i++){
@@ -1371,35 +1334,6 @@
     }
 
 
-    $('#daochu').click(function () {
-            //var tablehtml=$('#table tbody').html();
-            //tableToExcel('table',tablehtml,'全省医疗服务质量指标的概览')
-        var tableData = [];
-        if("${userType}"!='机构'){
-            tableData.push(["入组医疗机构总数："+$('#jg_td10').text()+"家","三级医院："+$('#jg_td0').text()+"家","其中：三级综合医院"+$('#jg_td1').text()+"家","三级专科医院"+$('#jg_td11').text()+"家","三级中医院"+$('#jg_td12').text()+"家","三级妇幼医院"+$('#jg_td13').text()+"家","甲等"+$('#jg_td2').text()+"家","乙等"+$('#jg_td3').text()+"家","未定等"+$('#jg_td4').text()+"家"]);
-            tableData.push(["","二级医院："+$('#jg_td5').text()+"家","其中：二级综合医院"+$('#jg_td6').text()+"家","二级专科医院"+$('#jg_td14').text()+"家","二级中医院"+$('#jg_td15').text()+"家","二级妇幼医院"+$('#jg_td16').text()+"家","甲等"+$('#jg_td7').text()+"家","乙等"+$('#jg_td8').text()+"家","未定等"+$('#jg_td9').text()+"家"]);
-        }
-        tableData.push([$('#dt').text()]);
-        tableData.push(["入组患者总人次："+$('#td0').text()+"人次","总医疗费用："+$('#td1').text()+"元","总住院日："+$('#td2').text()+"天","总权重数："+$('#td3').text(),"DRGs组数："+$('#td4').text()+"组","总死亡人数："+$('#td5').text()+"人"]);
-        tableData.push(["总入组率："+$('#td16').text()+"%","人均住院费用："+$('#td6').text()+"元","平均住院日："+$('#td7').text()+"天","病例组合指数（CMI）："+$('#td8').text(),"手术率："+$('#td11').text(),"手术死亡率："+$('#td12').text()]);
-        tableData.push(["","每权重费率："+$('#td9').text()+"元","住院患者死亡率："+$('#td13').text(),"药占比："+$('#td14').text()+"%","耗材比："+$('#td15').text()+"%"]);
-        var excleJson = {excel:JSON.stringify(
-            [
-                {
-                    name:'全省医疗服务质量指标的概览',
-                    table:JSON.stringify(
-                        [
-                            {
-                                data:JSON.stringify(tableData)
-                            }
-                        ]
-                    )
-                }
-            ]
-        )};
-
-        ExcelDown(excleJson);
-    });
     $('#daochu1').click(function () {
         var a = getBase64Image('data1');
         var b = getBase64Image('data2');

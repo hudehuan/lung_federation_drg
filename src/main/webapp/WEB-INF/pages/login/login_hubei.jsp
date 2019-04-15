@@ -74,7 +74,7 @@
 <div class="box">
 
     <div class="center">
-        <div class="header" style="text-align: center;width: 800px;">湖北省省级住院医疗服务绩效评价平台</div>
+        <div class="header" style="text-align: center;width: 800px;">结核病创新联盟医院评审评价信息平台</div>
         <div class="b-login">
             <form method="post" id="loginForm">
                 <input type="hidden" name="client" value=${client}/>

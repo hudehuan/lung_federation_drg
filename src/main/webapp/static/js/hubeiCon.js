@@ -1,5 +1,5 @@
 var hubeiCon = {
-    initCon:function(ptDm,jbDm){
+    initCon:function(ptDm){
         var userType = parent.userType;
         var bivar = parent.bivar;
         var biArray = [];
@@ -10,28 +10,19 @@ var hubeiCon = {
         }
 
         if(biArray[2]=="@novalue"){
-            biArray[2] = "全部";
+            biArray[2] = "";
         }
         if(biArray[1]=="@novalue"){
-            biArray[2] = "";
-            biArray[1] = "全部";
+            biArray[1] = "";
+            //biArray[1] = "全部";
         }
-        if(biArray[0]=="@novalue"){
+        if(biArray[0]=="@novalue"||userType=='全国'){
             biArray[0] = "全国";
-            if(biArray[1]=="全部"){
-                biArray[1] = "";
-            }
         }
-        switch (userType){
-            case "全国" :
-                $("#"+ptDm).show();
-                $("#"+ptDm).val(biArray[0]+biArray[1]+biArray[2]);
-                break;
-            case "省级" :
-                $("#"+jbDm).show();
-                $("#"+jbDm).val(biArray[0]+biArray[1]+biArray[2]);
-                break;
+        if(userType=='全国'){
+            $("#"+ptDm).show();
         }
+        $("#"+ptDm).val(biArray[0]+biArray[1]+biArray[2]);
         var ds;
         var jb;
         var tipindex;
@@ -41,11 +32,48 @@ var hubeiCon = {
         // s +='<div class="btn-bottom layui-btn-group"><a class="layui-btn layui-btn-primary layui-btn-small" style="margin-right: 8px!important;">取消</a></div>'
 
 
-        var s="<div class='dengji'><span class='jibei-yiyuan ds-xz-t' ><span id='dengji-shi'>"+biArray[0]+"</span></span><span class='jibei-yiyuan ds-xz'></span><span class='shenji-pintai'>全省地市</span></div>";
-        s +='<div class="t-quanbu jb-active jibei-yiyuan"><div class="ji-b er-ji" style="color: #24BB12;">所有:</div><ul class="er-ji-ul"><li><a bi-jibei="全部">全部</a></li><li><a bi-jibei="所有综合">综合医院</a></li><li><a bi-jibei="所有专科">专科医院</a></li><li><a bi-jibei="所有中医">中医医院</a></li><li><a bi-jibei="所有妇幼">妇幼医院</a></li><li><a bi-jibei="所有民营">民营医院</a></li></ul><div class="ji-b er-ji">三级:</div><ul class="er-ji-ul"><li><a bi-jibei="三级全部">全部</a></li><li><a bi-jibei="三级综合">综合医院</a></li><li><a bi-jibei="三级专科">专科医院</a></li><li><a bi-jibei="三级中医">中医医院</a></li><li><a bi-jibei="三级妇幼">妇幼医院</a></li><li><a bi-jibei="三级民营">民营医院</a></li></ul><div class="ji-b san-ji">二级:</div><ul class="san-ji-ul"><li><a bi-jibei="二级全部">全部</a></li><li><a bi-jibei="二级综合">综合医院</a></li><li><a bi-jibei="二级专科">专科医院</a></li><li><a bi-jibei="二级中医">中医医院</a></li><li><a bi-jibei="二级妇幼">妇幼医院</a></li><li><a bi-jibei="二级民营">民营医院</a></li></ul></div>'
-        s +='<div class="t-quanbu jb-active shenji-pintai"><div><a class="active" data-shi="全省">全省</a></div><ul><li><a data-shi="省属">省属</a></li><li><a data-shi="武汉市">武汉市</a></li><li><a data-shi="黄石市">黄石市</a></li><li><a data-shi="十堰市">十堰市</a></li><li><a data-shi="宜昌市">宜昌市</a></li><li><a data-shi="襄阳市">襄阳市</a></li><li><a data-shi="鄂州市">鄂州市</a></li><li><a data-shi="荆门市">荆门市</a></li><li><a data-shi="孝感市">孝感市</a></li><li><a data-shi="荆州市">荆州市</a></li><li><a data-shi="黄冈市">黄冈市</a></li><li><a data-shi="咸宁市">咸宁市</a></li><li><a data-shi="随州市">随州市</a></li><li><a data-shi="恩施土家族苗族自治州">恩施</a></li><li><a data-shi="省直辖县级行政单位">省直辖</a></li></ul></div>'
+        var s="<div class='dengji'><span class='jibei-yiyuan ds-xz-t' ><span id='dengji-sheng'>"+biArray[0]+"</span></span><span class='jibei-yiyuan ds-xz'></span><span class='shenji-pintai'>全国省市</span></div>";
+        s +='<div class="t-quanbu jb-active shenji-pintai"><div><a class="active" data-sheng="全国">全国</a></div><ul>' +
+            '<li><a data-sheng="北京市">北京市</a></li>' +
+            '<li><a data-sheng="上海市">上海市</a></li>' +
+            '<li><a data-sheng="天津市">天津市</a></li>' +
+            '<li><a data-sheng="重庆市">重庆市</a></li>' +
+            '<li><a data-sheng="河北省">河北省</a></li>' +
+            '<li><a data-sheng="山西省">山西省</a></li>' +
+            '<li><a data-sheng="辽宁省">辽宁省</a></li>' +
+            '<li><a data-sheng="吉林省">吉林省</a></li>' +
+            '<li><a data-sheng="黑龙江省">黑龙江省</a></li>' +
+            '<li><a data-sheng="江苏省">江苏省</a></li>' +
+            '<li><a data-sheng="浙江省">浙江省</a></li>' +
+            '<li><a data-sheng="安徽省">安徽省</a></li>' +
+            '<li><a data-sheng="福建省">福建省</a></li>' +
+            '<li><a data-sheng="江西省">江西省</a></li>' +
+            '<li><a data-sheng="山东省">山东省</a></li>' +
+            '<li><a data-sheng="重庆市">重庆市</a></li>' +
+            '<li><a data-sheng="河北省">河北省</a></li>' +
+            '<li><a data-sheng="山西省">山西省</a></li>' +
+            '<li><a data-sheng="河南省">河南省</a></li>' +
+            '<li><a data-sheng="湖北省">湖北省</a></li>' +
+            '<li><a data-sheng="湖南省">湖南省</a></li>' +
+            '<li><a data-sheng="广东省">广东省</a></li>' +
+            '<li><a data-sheng="海南省">海南省</a></li>' +
+            '<li><a data-sheng="四川省">四川省</a></li>' +
+            '<li><a data-sheng="贵州省">贵州省</a></li>' +
+            '<li><a data-sheng="云南省">云南省</a></li>' +
+            '<li><a data-sheng="陕西省">陕西省</a></li>' +
+            '<li><a data-sheng="河南省">河南省</a></li>' +
+            '<li><a data-sheng="甘肃省">甘肃省</a></li>' +
+            '<li><a data-sheng="青海省">青海省</a></li>' +
+            '<li><a data-sheng="台湾省">台湾省</a></li>' +
+            '<li><a data-sheng="内蒙古自治区">内蒙古自治区</a></li>' +
+            '<li><a data-sheng="广西壮族自治区">广西壮族自治区</a></li>' +
+            '<li><a data-sheng="西藏自治区">西藏自治区</a></li>' +
+            '<li><a data-sheng="宁夏回族自治区">宁夏回族自治区</a></li>' +
+            '<li><a data-sheng="新疆维吾尔自治区">新疆维吾尔自治区</a></li>' +
+            '<li><a data-sheng="香港特别行政区">香港特别行政区</a></li>' +
+            '<li><a data-sheng="澳门特别行政区">澳门特别行政区</a></li>' +
+            '</ul></div>'
         s +='<div class="btn-bottom layui-btn-group"><a class="layui-btn layui-btn-primary layui-btn-small" style="margin-right: 8px!important;">取消</a></div>'
-
         $('.center-back-cs .'+ptDm).on('click',function(){
             var that = this;
             tipindex = layer.tips(s,that,{time:0, maxWidth:250,fix:true});
@@ -53,49 +81,39 @@ var hubeiCon = {
         $('body').on('click',".btn-bottom a",function(){
             $('.layui-layer-tips').hide();
         });
-        $('body').on('click',".dengji .jibei-yiyuan",function(){
+       /* $('body').on('click',".dengji .jibei-yiyuan",function(){
             if(userType == "省级") return;
             $(".shenji-pintai").show();
             $(".jibei-yiyuan").hide();
         });
         $('body').on('click',".jibei-yiyuan a",function(){
             $('.layui-layer-tips').hide();
-        });
+        });*/
         $('body').on('click',".shenji-pintai a",function(){
             $(".shenji-pintai").hide();
-            $(".jibei-yiyuan").show();
+            $('.layui-layer-tips').hide();
+           // $(".jibei-yiyuan").show();
         });
         $('body').on('click',".shenji-pintai a",function(){
             $('body .shenji-pintai a').removeClass('active');
             $(this).addClass('active');
-            var ds=$(this).attr("data-shi");
-            $("#dengji-shi").text(ds);
+            var ds=$(this).attr("data-sheng");
+            $("#dengji-sheng").text(ds);
+            $("#"+ptDm).val(ds);
+            var yy = document.getElementById("dept");
+            if(yy!=null&&typeof yy!='undefined'){
+                hubeiCon.loadyydate();
+            }
+
         });
-        $('body').on('click',".jibei-yiyuan a",function(){
+       /* $('body').on('click',".jibei-yiyuan a",function(){
             $('body .jibei-yiyuan a').removeClass('active');
             $(this).addClass('active');
             var jb=$(this).attr("bi-jibei");
             var  ds =  $("#dengji-shi").text();
-            $("#"+ptDm).val(ds+jb);
-            $("#"+jbDm).val(ds+jb);
-        });
-
-//第二个
-        var tipsdishi;
-        var a = document.getElementById(jbDm);
-        $('.center-back-cs .'+jbDm).on('click',function(){
-            var c = a.value;
-            if(c==""){
-                var that = this;
-                tipsdishi = layer.tips(s,that,{time:0, maxWidth:250,fix:true});
-            }else{
-
-                var that = this;
-                tipsdishi = layer.tips(s,that,{time:0, maxWidth:250,fix:true});
-                $('body .shenji-pintai').css('display','none');
-                $('body .jibei-yiyuan').css('display','inline-block');
-            }
-        });
+            $("#"+ptDm).val(ds+'全部');
+            $("#"+jbDm).val(ds+'全部');
+        });*/
     },
 
 
@@ -103,19 +121,10 @@ var hubeiCon = {
 
 
 //科室 病组 控件
-    ksTreeData : [],
     mdcTreeData : [],
-    ksId:"",
     mdcId:"",
-    hospitalCon:function (ks,mdc){
-        this.ksId = ks;
-        this.loadKsui(ks);
+    hospitalCon:function (mdc){
         this.mdcId = mdc;
-        $("#"+ks).click(function(){
-            var height = findDimensions_height();
-            var width = findDimensions_width();
-            layeropen(width*0.55,height*0.9-150,"","/hubei/V_hospitalCon/toHospitalCon/V_ksCon?treeData=");
-        });
         $("#"+mdc).click(function(){
             var height = findDimensions_height();
             var width = findDimensions_width();
@@ -143,38 +152,6 @@ var hubeiCon = {
         // $("#"+mdc).on('mouseout',function(){//mouseenter
         //     layer.closeAll("tips");
         // });
-    },
-    loadKsTree:function(id,data){
-        var treeJson = [];
-        var pCodes = [];
-        for(var i=0;i<data.length;i++){
-            var p_code = data[i].td0.substring(0,2);
-            if($.inArray(p_code,pCodes)>-1){
-                continue;
-            }
-            pCodes.push(p_code);
-            var childJson = [];
-            for(var j=0;j<data.length;j++) {
-                var c_json;
-                if(data[j].td0.substring(0,2)==p_code){
-                    c_json = {"id":data[j].td0, "text":data[j].td1, "iconCls":"icon-save"};
-                    childJson.push(c_json);
-                }
-
-            }
-            var p_json;
-            if(childJson.length>0){
-                p_json= {"id":data[i].td0, "text":data[i].td2, "iconCls":"icon-save", "state":"open","children":childJson};
-            }else{
-                p_json= {"id":data[i].td0, "text":data[i].td2, "iconCls":"icon-save"};
-            }
-            treeJson.push(p_json);
-        }
-        $('#'+id).tree({
-            method: "get",
-            animate: true,
-            data: treeJson
-        });
     },
     loadMdcTree:function(id,data){
         var treeJson = [];
@@ -212,61 +189,28 @@ var hubeiCon = {
             }
         });
     },
-    loadKsui:function(id) {
-        var ksthis = this;
-        var grid;
-        var keyword="";
-        var autoid="gridtable_"+id;
-        //加载grid
-        var loadData=function(gid){
-            $('#'+gid).height(228);
-            $('#'+gid).datagrid({
-                url:'',
-                method:'get',
-                data:ksthis.ksTreeData,
-                singleSelect:true,//是否只能选中一行
-                pagination:false,//是否启动分页
-                rownumbers:true,
-                columns:[
-                    [
-                        { field: 'code', title: '代码', width: '80px', align: 'left',sortable:true,  halign: 'center'},
-                        { field: 'name', title: '名称', width: '198px', align: 'left',sortable:true,  halign: 'center'},
-                    ]
-                ]
-            });
-            // $('#'+gid).datagrid({'data':ksTreeData});
-
-        };
-        $('#'+id).tooltip({
-            position: 'top',
-            content: '<table id="'+autoid+'"></table>',
-            showEvent:"mouseenter",
-            hideEvent:"aa",
-            // dataX:40,
-            // dataY:80,
-            onShow: function(){
-                var top=$(this).tooltip('tip').offset().top-12;
-                $(this).tooltip('tip').attr("id","tips_"+id);
-                $(this).tooltip('tip').css({
-                    top:'28px'
-                });
-                $("#tips_"+id).mouseleave(function(){
-                    $("#tips_"+id).hide();
-                })
-                $("#"+id).mouseleave(function(event) {
-                    $("#tips_"+id).hide();
-                })
-                $("#tips_"+id).mouseenter(function(){
-                    $("#tips_"+id).show();
-                })
-                if(ksthis.ksTreeData.length>0){
-                    loadData("gridtable_"+id);
-                }else{
-                    $("#tips_"+id).hide();
+    loadyydate:function(){
+        var sheng = $("#sj-pt").val()
+        //sheng = sheng.substring(0,sheng.lastIndexOf("全"));
+        if(sheng=='全国'||sheng==''){
+            sheng = ''
+        }
+        var postdata = {p_dm: "selectxqName",xqName:sheng};
+        dLong.getJSON("/commapiV2",postdata,function(data){
+            if (data.success) {
+                var s='<option value="-1"></option><option value="全部"  class="qbyy" id="@novalue">全部</option>';
+                if(data.Table.length>0){
+                    $.each(data.Table,function(index,item){
+                        s+='<option class="yy" id="'+item.name+'|" value="'+item.name+'">'+item.name+'</option >'
+                    })
                 }
-
+                //$('.yy').remove();
+                $('.qbyy').after(s);
+                $('.dept_select').html(s)
+                $('.dept_select').trigger("chosen:updated");
+                
             }
-        })
+        },true);
     },
     loadmdcui:function(id){
         var mdcthis = this;

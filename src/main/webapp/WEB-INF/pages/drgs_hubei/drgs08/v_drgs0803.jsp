@@ -159,7 +159,7 @@
 <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
 <script>
     $(function () {
-        hubeiCon.hospitalCon('sj-ks','sj-bz');
+        hubeiCon.hospitalCon('sj-bz');
     });
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function(){
@@ -171,7 +171,6 @@
             }
         })
     });
-    var kstj = '@novalue|';
     var mdctj = '@novalue|';
     $("body").delegate("tbody a","click",function(){
         var kemu = $(this).text();
@@ -188,13 +187,10 @@
     var biIds =['2578f351-4e31-4968-8665-e00c7c9e19ea','42b8560f-2aa7-4b04-b282-11ac8c3e5e90','2df93abc-85c3-4fc4-9c7a-0afdf719dcae'];//报表id
     var biKeys =[];//报表返回softkey
     var flag = true;
-    var kstj,mdctj;
+    var mdctj;
     $(function () {
         var date = new Date;
         var year=date.getFullYear();
-        if("${kstj}"){
-            kstj="${kstj}";
-        }
         if("${mdctj}"){
             mdctj="${mdctj}";
         }
@@ -258,18 +254,7 @@
             $('#daochu').show();
             $('#daochu1').show();
         }
-        kstj = '@novalue|';
         mdctj = '@novalue|';
-        if(hubeiCon.ksTreeData.length>0){
-            kstj = '';
-            for(var i=0;i<hubeiCon.ksTreeData.length;i++){
-                kstj+=hubeiCon.ksTreeData[i].code;
-                if(i<hubeiCon.ksTreeData.length-1){
-                    kstj+=",";
-                }
-            }
-            kstj += '|';
-        }
         if(hubeiCon.mdcTreeData.length>0){
             mdctj = "";
             for(var i=0;i<hubeiCon.mdcTreeData.length;i++){
@@ -302,7 +287,7 @@
                 if(!"${hospital}"){
                     $("#hospital").text(data.rows.row[0].cell[1]);
                 }
-                var cxtj0 = cxsj+"|"+data.rows.row[0].cell[0]+"|"+kstj+mdctj;;
+                var cxtj0 = cxsj+"|"+data.rows.row[0].cell[0]+"|"+mdctj;;
                 var url0 ='${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar='+
                     '&biyccs=&id=' +biKeys[1].id+'&softkey='+biKeys[1].softkey +
                     '&cxtj='+escape(cxtj0)+'&topdata=&timew=&weiplan=';
@@ -317,7 +302,7 @@
                             setData0(data0);
                         }
                     });
-                var cxtj1 = cxsj+"|"+data.rows.row[0].cell[0]+"|"+kstj+mdctj;
+                var cxtj1 = cxsj+"|"+data.rows.row[0].cell[0]+"|"+mdctj;
                 var url1 ='${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar='+
                     '&biyccs=&id=' +biKeys[2].id+'&softkey='+biKeys[2].softkey +
                     '&cxtj='+escape(cxtj1)+'&topdata=&timew=&weiplan=';

@@ -213,7 +213,7 @@
 <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
 <script>
     $(function () {
-        hubeiCon.hospitalCon('sj-ks','sj-bz');
+        hubeiCon.hospitalCon('sj-bz');
     });
     //获取屏幕的高
     var H= 0;
@@ -297,16 +297,6 @@
     function search() {
         $("#loading").show();
         var loads=1;
-        if(hubeiCon.ksTreeData.length>0){
-            kstj = '';
-            for(var i=0;i<hubeiCon.ksTreeData.length;i++){
-                kstj+=hubeiCon.ksTreeData[i].code;
-                if(i<hubeiCon.ksTreeData.length-1){
-                    kstj+=",";
-                }
-            }
-            kstj += '|';
-        }
         if(hubeiCon.mdcTreeData.length>0){
             mdctj = "";
             for(var i=0;i<hubeiCon.mdcTreeData.length;i++){

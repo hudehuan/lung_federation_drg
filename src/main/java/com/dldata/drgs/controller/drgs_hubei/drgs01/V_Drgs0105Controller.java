@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Properties;
@@ -23,7 +24,7 @@ public class V_Drgs0105Controller {
     SysUserInfoService sysUserInfoService;
     @RequestMapping("/toList")
     public String toList(Model model, @CookieValue(value = "userid",defaultValue = "")String userid,
-                         String dateTime,String bivar)throws Exception {
+                         String dateTime, String bivar, HttpSession session)throws Exception {
         SysUserInfoEntity userInfoEntity = sysUserInfoService.getUserInfoByUserID(userid, SysConfig.SysCode);
         InputStreamReader in = null;
         Properties prop=new Properties();
@@ -31,6 +32,8 @@ public class V_Drgs0105Controller {
         BufferedReader bf = new BufferedReader(in);
         prop.load(bf);
         String biIp = prop.getProperty("HBIURL","");
+        String staffname = session.getAttribute("staffname").toString();
+        model.addAttribute("staffname",staffname);
         model.addAttribute("biqtuser",userInfoEntity.getLoginName());
         model.addAttribute("biIp",biIp);
         model.addAttribute("dateTime",dateTime);

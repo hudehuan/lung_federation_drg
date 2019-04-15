@@ -49,7 +49,7 @@ public class ReportController {
         SysUserInfoEntity userInfoEntity = sysUserInfoService.getUserInfoByUserID(userId, SysConfig.SysCode);
         InputStreamReader in = null;
         Properties prop=new Properties();
-        in = new InputStreamReader(this.getClass().getResourceAsStream("/sysconfig.properties"));
+        in = new InputStreamReader(this.getClass().getResourceAsStream("/sysconfig.properties"),"utf-8");
         BufferedReader bf = new BufferedReader(in);
         prop.load(bf);
 

@@ -77,25 +77,8 @@ public class IndexController {
         DirectoryConfig.SYS =request.getSession().getServletContext().getRealPath("SYS");
         String userName="";
         String userId="";
-        String bivar = request.getParameter("bivar");
         HttpSession session = request.getSession();
         session.removeAttribute("bivar");
-        if(bivar!=null){
-            bivar=StringUtil.unescape(bivar);
-//            session.setAttribute("bivar",bivar);
-            model.addAttribute("bivar",bivar);
-            session.setAttribute("bivar",bivar);
-            String reg = "[!$^&*+={}';'\",<>/?~！#￥……&*——{}【】‘；：”“'。，、？]";
-            for(int i=0;i<bivar.length();i++){
-                String str = bivar.substring(i,i+1);
-                if(str.matches(reg)){
-                    session.setAttribute("paramsError","参数中含有非法字符！");
-                    response.sendRedirect("/");
-                    break;
-                }
-            }
-
-        }
         userId = (String)session.getAttribute("userid");
 
 
@@ -138,6 +121,7 @@ public class IndexController {
         model.addAttribute("staffname",userName);
         //model.addAttribute("loginname",loginname);
         model.addAttribute("userId",userId);
+        model.addAttribute("bivar",userName+"|@novalue|@novalue|");
 
         SysUserInfoPtEntity sysUserInfoPtEntity = sysUserInfoPtService.getAllByUserId(userId,SysConfig.SysCode);
         String userType = "";
@@ -169,6 +153,7 @@ public class IndexController {
         model.addAttribute("userType",userType);
         session.setAttribute("userType",userType);
         session.setAttribute("hosName",hosName);
+        session.setAttribute("staffname",userName);
         //查询默认首页，并返回地址
         String userHome = "";
         SysHomePageEntity sysHomePageEntity = new SysHomePageEntity();

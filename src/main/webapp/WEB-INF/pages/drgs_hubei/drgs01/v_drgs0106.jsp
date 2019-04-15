@@ -142,10 +142,11 @@
 <script type="text/javascript" src="${ctx}/static/js/macarons.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/dlchart.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/jsonpData.js"></script>
+<script type="text/javascript" src="${ctx }/static/js/dlcommon.js"></script>
 
 <script>
     $(function () {
-        hubeiCon.initCon('sj-pt','sj-jb');
+        hubeiCon.initCon('sj-pt');
     })
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function () {
@@ -245,7 +246,6 @@
         search();
     })
 
-    var kstj = '@novalue|';
     var yydm="${yydm}";
     function search() {
         $("#loading").show();
@@ -261,9 +261,6 @@
         var sTime = rq+"-01";
         var eTime = rq+"-"+(new Date(new_date .getTime()-1000*60*60*24)).getDate();
         var bivar = "";
-        if("${kstj}"){
-            kstj="${kstj}";
-        }
         if("${bivar}"){
             bivar = "${bivar}";
         }else{
@@ -275,24 +272,26 @@
             })
 
         }
-        if(bivar == "全省"){
+        bivar = $('#sj-pt').val();
+        if(bivar == "全国"){
             bivar = "@novalue|@novalue|@novalue|";
         }else {
-            bivar = bivar.replace("全省","@novalue");
-            if(bivar.indexOf("二级")>-1||bivar.indexOf("三级")>-1|| bivar.indexOf("所有") > -1){
-                bivar = bivar.replace("二级","|二级|");
-                bivar = bivar.replace("三级","|三级|");
-                bivar = bivar.replace("所有","|@novalue|");
-                if(bivar.indexOf("全部")>-1){
-                    bivar = bivar.replace("全部","@novalue")
-                }
-                bivar += "|";
-            }else{
-                bivar = bivar.replace("全部","|@novalue|@novalue|");
+
+            bivar +="|@novalue|@novalue|";
+
+        }
+        if("${userType}"=='省级'||"${userType}"=='全国'){
+            yydm=$("#dept option:checked").text();
+            if(!yydm||yydm=='全部'){
+                yydm = '@novalue';
+                hubeiCon.loadyydate();
             }
+        }else{
+            $('#dept').hide();
+            yydm=parent.hosName;
         }
         //报表1
-        var cxtj =  sTime + ";" + eTime + "|"+kstj+yydm+ "|";
+        var cxtj =  sTime + ";" + eTime + "|"+yydm+ "|";
         loads++;
         var url = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar=' + escape(escape(bivar)) +
             '&biyccs=&id=' + biKeys[0].id + '&softkey=' + biKeys[0].softkey +
@@ -311,11 +310,11 @@
         });
     }
 
-    function getData(param) {
+    function getData(param) {debugger
         if(param){
             $("#loading").show();
         }
-
+        param = param?param:''
         var yy;
         switch(param){
             case '1':
@@ -333,8 +332,11 @@
             case '6':
                 yy='@novalue|@novalue|@novalue|@novalue|1|@novalue|';
                 break;
-            default:
+            case '7':
                 yy='@novalue|@novalue|@novalue|@novalue|@novalue|1|';
+                break;
+            default:
+                yy='@novalue|@novalue|@novalue|@novalue|@novalue|@novalue|';
                 break;
         }
         var year = rq.substring(0,4);
@@ -359,24 +361,16 @@
              })*/
             bivar="@novalue|@novalue|@novalue|";
         }
-        if (bivar == "全省") {
+        if(bivar == "全国"){
             bivar = "@novalue|@novalue|@novalue|";
-        } else {
-            bivar = bivar.replace("全省", "@novalue");
-            if (bivar.indexOf("二级") > -1 || bivar.indexOf("三级") > -1) {
-                bivar = bivar.replace("二级", "|二级|");
-                bivar = bivar.replace("三级", "|三级|");
-                if (bivar.indexOf("全部") > -1) {
-                    bivar = bivar.replace("全部", "@novalue")
-                }
-                bivar += "|";
-            } else {
-                bivar = bivar.replace("全部", "|@novalue|@novalue|");
-            }
+        }else {
+
+            bivar +="|@novalue|@novalue|";
+
         }
-        var cxtj =  sTime + ";" + eTime + "|"+kstj+yydm+ "|"+yy;
+        var cxtj =  sTime + ";" + eTime + "|"+yydm+ "|"+yy;
         loads++;
-        var url = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar=' + escape(escape(bivar+param+"|")) +
+        var url = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar=' + escape(escape(bivar+"|")) +
             '&biyccs=&id=' + biKeys[1].id + '&softkey=' + biKeys[1].softkey +
             '&cxtj=' + escape(cxtj) + '&topdata=&timew=&weiplan=';
         $.ajax({

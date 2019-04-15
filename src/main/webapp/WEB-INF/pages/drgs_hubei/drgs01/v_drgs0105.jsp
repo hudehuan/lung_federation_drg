@@ -98,15 +98,11 @@
         <li>
             <div class="center-back-cs">
                 <input hidden style="width: 150px; height: 24px;border-radius:2px;cursor: pointer" class="sj-pt"
-                       id="sj-pt" readonly="readonly" value="" type="text" placeholder="平台机构选择"/>
-                <input hidden style="width: 150px; height: 24px;border-radius:2px;cursor: pointer" class="sj-jb"
-                       id="sj-jb" readonly="readonly" value="" type="text" placeholder="平台机构选择"/>
-                <select name="dept" data-placeholder="医疗机构选择" style="width:210px;font-size: 12px;    height: 24px;border: 1px solid #ddd;border-radius: 2px;" id="dept" class="dept_select">
-                    <option value="-1"></option>
-                    <option value="全部"  class="qbyy" id="@novalue">全部</option>
+                       id="sj-pt"  readonly="readonly" value="" type="text" placeholder="平台机构选择"/>
+                <select name="dept"  data-placeholder="医疗机构选择" style="width:210px;font-size: 12px;    height: 24px;border: 1px solid #ddd;border-radius: 2px;" id="dept" class="dept_select">
+                   <%-- <option value="-1"></option>
+                    <option value="全部"  class="qbyy" id="@novalue">全部</option>--%>
                 </select>
-                <input  style="width: 150px; height: 24px;border-radius:2px;cursor: pointer"
-                        class="sj-ks" id="sj-ks" readonly="readonly" value="" type="text" placeholder="科室选择" />
             </div>
         </li>
 
@@ -243,10 +239,11 @@
 <script type="text/javascript" src="${ctx }/static/js/chosen.jquery.js"></script>
 <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
 <script type="text/javascript" src="${ctx }/static/js/html2canvas.min.js"></script>
+<script type="text/javascript" src="${ctx }/static/js/dlcommon.js"></script>
 <script>
     $(function () {
-        hubeiCon.initCon('sj-pt','sj-jb');
-        hubeiCon.hospitalCon('sj-ks','sj-bz');
+        hubeiCon.initCon('sj-pt');
+        hubeiCon.hospitalCon('sj-bz');
     })
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function () {
@@ -280,7 +277,7 @@
                 return false;
             }
         })
-        parent.layeropen(width*0.95,height*0.9,"","/hubei/V_Drgs0106/toList?dateTime="+dateTime+"&bivar="+bivar+"&kstj="+escape(escape(kstj))+"&yydm="+yydm);
+        parent.layeropen(width*0.95,height*0.9,"","/hubei/V_Drgs0106/toList?dateTime="+dateTime+"&bivar="+bivar+"&yydm="+yydm);
     })
     //菜单滑动
     $(document).ready(function () {
@@ -318,6 +315,7 @@
     var biKeys = [];//报表返回softkey
     var userType = "${userType}";
     $(document).ready(function () {
+        $('.dept_select').chosen();
         if(userType=="机构"){
             $("#wrzdc").show();
         }
@@ -343,90 +341,30 @@
         flag = false;
         search();
     })
-    var kstj;
     var yydm = '@novalue';
     var bivar = "";
     function search() {
-        kstj = '@novalue|';
         $("#loading").show();
         var loads = 1;
         var rq = $("#rq").val();
         var sTime = rq + "-01-01";
         var eTime = rq + "-12-31";
-        var bivar = "";
-        /*$(".center-back-cs").find("input").each(function () {
-            if ($(this).css("display") != 'none') {
-                bivar = $(this).val();
-                return false;
-            }
-        })
-        if(bivar == "全省"){
-            bivar = "@novalue|@novalue|@novalue|";
-        }else {
-            bivar = bivar.replace("全省","@novalue");
-            if(bivar.indexOf("二级")>-1||bivar.indexOf("三级")>-1|| bivar.indexOf("所有") > -1){
-                bivar = bivar.replace("二级","|二级|");
-                bivar = bivar.replace("三级","|三级|");
-                bivar = bivar.replace("所有","|@novalue|");
-                if(bivar.indexOf("全部")>-1){
-                    bivar = bivar.replace("全部","@novalue")
-                }
-                bivar += "|";
-            }else{
-                bivar = bivar.replace("全部","|@novalue|@novalue|");
-            }
-        }*/
-        if(hubeiCon.ksTreeData.length>0){
-            kstj = '';
-            for(var i=0;i<hubeiCon.ksTreeData.length;i++){
-                kstj+=hubeiCon.ksTreeData[i].code;
-                if(i<hubeiCon.ksTreeData.length-1){
-                    kstj+=",";
-                }
-            }
-            kstj += '|';
-        }
+
         //查询条件
-        bivar = $('#sj-jb').val();
+        bivar = $('#sj-pt').val();
         if(bivar == "全国"){
             bivar = "@novalue|@novalue|@novalue|";
         }else {
-            bivar = bivar.replace("全国","@novalue");
-            if(bivar.indexOf("二级")>-1||bivar.indexOf("三级")>-1|| bivar.indexOf("所有") > -1){
-                bivar = bivar.replace("二级","|二级|");
-                bivar = bivar.replace("三级","|三级|");
-                bivar = bivar.replace("所有","|@novalue|");
-                if(bivar.indexOf("全部")>-1){
-                    bivar = bivar.replace("全部","@novalue")
-                }
-                bivar += "|";
-            }else{
-                bivar = bivar.replace("全部","|@novalue|@novalue|");
-            }
+
+            bivar +="|@novalue|@novalue|";
+
         }
         if("${userType}"=='省级'||"${userType}"=='全国'){
             yydm=$("#dept option:checked").text();
             if(!yydm||yydm=='全部'){
                 yydm = '@novalue';
+                hubeiCon.loadyydate();
             }
-            var url = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar=' + escape(escape(bivar)) +
-                '&biyccs=&id=' + biKeys[1].id + '&softkey=' + biKeys[1].softkey +
-                '&cxtj=&topdata=&timew=&weiplan=';
-            $.ajax({
-                type: "GET",
-                url: url,
-                dataType: "jsonp",
-                success: function (data) {
-                    var s='';
-                    for(var a=0;a<data.rows.row.length;a++)
-                    {
-                        s+='<option class="yy" id="'+data.rows.row[a].cell[0]+'|" value="'+data.rows.row[a].cell[1]+'">'+data.rows.row[a].cell[1]+'</option>'
-                    }
-                    //$('.yy').remove();
-                    $('.qbyy').after(s);
-                    $('.dept_select').chosen();
-                }
-            });
         }else{
             $('#dept').hide();
             yydm=parent.hosName;
@@ -441,7 +379,7 @@
             yydm=parent.hosName;
         }*/
         //报表1
-        var cxtj =  sTime + ";" + eTime + "|"+kstj+yydm+ "|";
+        var cxtj =  sTime + ";" + eTime + "|"+yydm+ "|";
         var url = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar=' + escape(escape(bivar)) +
             '&biyccs=&id=' + biKeys[0].id + '&softkey=' + biKeys[0].softkey +
             '&cxtj=' + escape(cxtj) + '&topdata=&timew=&weiplan=';
@@ -459,10 +397,10 @@
             }
         });
 		
-		
+
 		if("${userType}"=="机构") {
 			loads++;
-			var cxtj =  sTime + ";" + eTime + "|"+kstj+yydm+ "|";
+			var cxtj =  sTime + ";" + eTime + "|"+yydm+ "|";
 			var url = '${biIp}/view/Dsnreport/ajax/AjaxGetReportJsonpData.ashx?callback=?&biqtuser=${biqtuser}&bivar=' + escape(escape(bivar)) +
 				'&biyccs=&id=' + biKeys[2].id + '&softkey=' + biKeys[2].softkey +
 				'&cxtj=' + escape(cxtj) + '&topdata=&timew=&weiplan=';
@@ -659,7 +597,7 @@
                     return false;
                 }
             })
-            parent.layeropen(width*0.95,height*0.9,"","/hubei/V_Drgs0106/toList?dateTime="+dateTime+"&bivar="+bivar+"&kstj="+escape(escape(kstj))+"&yydm="+yydm);
+            parent.layeropen(width*0.95,height*0.9,"","/hubei/V_Drgs0106/toList?dateTime="+dateTime+"&bivar="+bivar+"&yydm="+yydm);
 
         });
     }

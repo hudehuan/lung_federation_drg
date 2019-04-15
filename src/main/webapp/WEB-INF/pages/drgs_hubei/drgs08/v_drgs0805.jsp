@@ -133,7 +133,7 @@
 <script type="text/javascript" src="${ctx }/static/js/export.js"></script>
 <script>
     $(function () {
-        hubeiCon.hospitalCon('sj-ks','sj-bz');
+        hubeiCon.hospitalCon('sj-bz');
     });
     $('body').delegate('.page-list button', 'click', function () {
         $(this).next().find("li").each(function(){
